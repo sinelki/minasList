@@ -1,3 +1,1 @@
 # minasList
-# minasList
-# minasList
