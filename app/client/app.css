@@ -1,1 +1,20 @@
 /* CSS declarations go here */
+body {
+	background-color: #FFFFFF;
+}
+h1 {
+	font-color: #D00F4A;
+	font-family: 'Josefin Sans';
+	font-size: 22px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+}
+#web_logo {
+	text-align: left;
+	position: relative;
+}
+#shinkai_art {
+	text-align: center;
+	position: relative;
+}
