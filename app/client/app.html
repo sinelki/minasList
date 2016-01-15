@@ -5,10 +5,21 @@
 <body>
   <h1>Welcome to Meteor!</h1>
 
-  {{> hello}}
+  {{> hello }}
+  <!--{{> loginButtons}}-->
+  
 </body>
 
 <template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<!-- Not sure how to make these redirect to account pages-->
+<template name="newUser">
+	<button>New User?</button>
+</template>
+
+<template name="returningUser">
+	<button>Login</button>
 </template>
