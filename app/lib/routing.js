@@ -2,8 +2,10 @@ if(Meteor.isClient) {
   Profiles = new Mongo.Collection('Profiles');
 }
 
-Router.route('/', function(){
-  this.render('Home');
+Router.route('/', {
+  action: function(){
+    this.render('Home');    
+  }
 });
 
 Router.route('/profiles/:country', {
