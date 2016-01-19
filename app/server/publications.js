@@ -17,8 +17,14 @@ if(!profile){
   profile = Profiles.findOne({name: 'Shinkai Karokhail'});
 }
 
-console.log(profile)
+console.log(profile);
 
-Meteor.publish('Profiles', function() {
-  return Profiles;
+var latest={createdAt: -1};
+
+Meteor.publish('Profiles', function(query) {
+  return Profiles.find(query, {sort: latest, fields: {'_id':1, 'name':1, 'date':1, 'country':1, 'description':1}});
 });
+
+Meteor.publish('Profile', function(id){
+  return Profiles.find({_id:id});
+})
