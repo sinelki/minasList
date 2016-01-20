@@ -8,6 +8,12 @@ Router.route('/', {
   }
 });
 
+Router.route('/profiles', {
+  action: function() {
+    this.render('Profiles');
+  }
+});
+
 /*Router.route('/what_we_do', {
   action: function() {
     this.render('What');

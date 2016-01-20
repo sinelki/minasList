@@ -4,7 +4,7 @@ var userId=Meteor.users.findOne({username: 'user'});
 
 console.log(userId);
 
-if(!userId.username){
+if(!userId){
   Accounts.createUser({
     username: 'user',
     password : 'pass'
@@ -40,5 +40,5 @@ Meteor.publish('Profiles', function(query) {
 });
 
 Meteor.publish('Profile', function(id){
-  return Profiles.find({_id:id});
+  return Profiles.find({_id:id});sdhjyktu
 })
