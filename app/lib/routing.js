@@ -8,6 +8,30 @@ Router.route('/', {
   }
 });
 
+/*Router.route('/what_we_do', {
+  action: function() {
+    this.render('What');
+  }
+});
+
+Router.route('/why_we_do_it', {
+  action: function() {
+    this.render('Why');
+  }
+});
+
+Router.route('/library', {
+  action: function() {
+    this.render('Library');
+  }
+});
+
+Router.route('/about', {
+  action: function() {
+    this.render('About');
+  }
+});*/
+
 Router.route('/profiles/:country', {
   waitOn: function(){
     return Meteor.subscribe('Profiles', {country: this.params.country});
