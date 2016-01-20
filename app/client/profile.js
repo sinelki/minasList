@@ -1,3 +1,3 @@
 Template.Profile.helpers({
-  year:function(){return this.date.getFullYear();}
-});
+  year: function () { return this.date.getFullYear() }
+})
