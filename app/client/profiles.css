@@ -13,6 +13,8 @@ body {
 	background-color: #D3D3D3;
 	border: 1px solid #B8B8B8;
 	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -84,6 +86,58 @@ h1 {
 #create-new {
 	float: right;
 	margin-right: 10px;
+}
+
+.profile-list {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-block;
+}
+
+.stretch {
+	width: 100%;
+	display: inline-block;
+	font-size: 0;
+	line-height: 0;
+}
+
+.user-profile {
+	vertical-align: top;
+	height: 300px;
+	width: 48.5%;
+	background-color: #D3D3D3;
+	border: 1px solid #B8B8B8;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 5px;
+	margin-right: 5px;
+	display: inline-block;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+	background-image: linear-gradient(bottom, #BDBDBD 0%, #D3D3D3 100%);
+	background-image: -o-linear-gradient(bottom, #BDBDBD 0%, #D3D3D3 100%);
+	background-image: -moz-linear-gradient(bottom, #BDBDBD 0%, #D3D3D3 100%);
+	background-image: -webkit-linear-gradient(bottom, #BDBDBD 0%, #D3D3D3 100%);
+	background-image: -ms-linear-gradient(bottom, #BDBDBD 0%, #D3D3D3 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #BDBDBD), 
+		color-stop(1, #D3D3D3)
+	);
+}
+
+.user-name {
+	font-family: 'Tahoma';
+	padding-left: 10px;
+	color: #FFFFFF;
+	font-weight: normal;
+	margin-top: 5px;
 }
 
 .lower {

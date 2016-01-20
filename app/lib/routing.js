@@ -14,7 +14,7 @@ Router.route('/profiles', {
   }
 });
 
-/*Router.route('/what_we_do', {
+Router.route('/what_we_do', {
   action: function() {
     this.render('What');
   }
@@ -26,17 +26,11 @@ Router.route('/why_we_do_it', {
   }
 });
 
-Router.route('/library', {
-  action: function() {
-    this.render('Library');
-  }
-});
-
 Router.route('/about', {
   action: function() {
     this.render('About');
   }
-});*/
+});
 
 Router.route('/profiles/:country', {
   waitOn: function(){
