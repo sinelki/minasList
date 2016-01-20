@@ -1,11 +1,25 @@
 Profiles = new Mongo.Collection('Profiles');
 
+var userId=Meteor.users.findOne({username: 'user'});
+
+console.log(userId);
+
+if(!userId.username){
+  Accounts.createUser({
+    username: 'user',
+    password : 'pass'
+  });
+}
+
+var userId=Meteor.users.findOne({username: 'user'});
+
 Profiles.schema = new SimpleSchema({
   name: {type: String},
   date: {type: Date},
   country: {type: String},
   description: {type: String},
-  posts: {type: [Object]}
+  posts: {type: [Object]},
+  owner: {type: String}
 });
 
 Profiles.attachSchema(Profiles.schema);
@@ -13,7 +27,7 @@ Profiles.attachSchema(Profiles.schema);
 var profile = Profiles.findOne({name: 'Shinkai Karokhail'});
 
 if(!profile){
-  Profiles.insert({name: 'Shinkai Karokhail', date: new Date('December 17, 2015 03:24:00'), country: 'Afghanistan', description:'I am a parliament member', posts:[]});
+  Profiles.insert({name: 'Shinkai Karokhail', date: new Date('December 17, 2015 03:24:00'), country: 'Afghanistan', description:'I am a parliament member', posts:[], owner: userId.username});
   profile = Profiles.findOne({name: 'Shinkai Karokhail'});
 }
 
