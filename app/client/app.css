@@ -67,7 +67,24 @@ h1 {
 }
 .lower {
 	background-color: #D00F4A;
-	border: none;
+	border: 1px solid #B37D00;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+	background-image: linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+	background-image: -o-linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+	background-image: -moz-linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+	background-image: -webkit-linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+	background-image: -ms-linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #9D0B38), 
+		color-stop(1, #D00F4A)
+	);
 	color: white;
 	font-family: 'Arial';
 	padding: 15px 32px;
