@@ -1,0 +1,220 @@
+body {
+	background-color: #FFFFFF;
+}
+
+#web_logo {
+	text-align: left;
+	position: relative;
+}
+
+.profiles-header {
+	width: 100%;
+	height: 110px;
+	background-color: #D3D3D3;
+	border: 1px solid #B8B8B8;
+	margin-top: 15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+	background-image: linear-gradient(bottom, #BDBDBD 0%, #D3D3D3 100%);
+	background-image: -o-linear-gradient(bottom, #BDBDBD 0%, #D3D3D3 100%);
+	background-image: -moz-linear-gradient(bottom, #BDBDBD 0%, #D3D3D3 100%);
+	background-image: -webkit-linear-gradient(bottom, #BDBDBD 0%, #D3D3D3 100%);
+	background-image: -ms-linear-gradient(bottom, #BDBDBD 0%, #D3D3D3 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #BDBDBD), 
+		color-stop(1, #D3D3D3)
+	);
+}
+
+h1 {
+	color: #FFFFFF;
+	font-family: 'Tahoma';
+	padding-left: 10px;
+	margin-top: 5px;
+	height: 30px;
+}
+
+.profiles-buttons {
+	width: 100%;
+	height: 80px;
+}
+
+#all-profiles, #filter-by, #create-new {
+	display: inline-block;
+	width: 120px;
+	height: 20px;
+	font-family: 'Tahoma';
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	color: #FFFFFF;
+	background-color: #D00F4A;
+	border: 1px solid #B37D00;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+	background-image: linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+	background-image: -o-linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+	background-image: -moz-linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+	background-image: -webkit-linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+	background-image: -ms-linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #9D0B38), 
+		color-stop(1, #D00F4A)
+	);
+}
+
+#all-profiles:hover, #filter-by:hover, #create-new:hover {
+	transform: scale(1.05);
+}
+
+#create-new {
+	float: right;
+	margin-right: 10px;
+}
+
+.lower {
+	background-color: #D00F4A;
+	border: none;
+	color: white;
+	font-family: 'Arial';
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16pt;
+	border-radius: 2px;
+	width: 150px;
+	height: 50px;
+	float: right;
+	margin-left: 2px;
+	margin-right: 5px;
+	margin-bottom: 2px;
+}
+
+input{
+  display:none;
+}
+.lower label{
+  font-family: 'NotCourierSans';
+  text-transform:uppercase;
+  font-size:40px;
+  text-align:center;
+}
+
+.lower label:hover{
+  cursor:pointer;
+}
+
+.overlay{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	/*background: rgba(0,0,0,0.9);*/
+	background-color: #D00F4A;
+	word-spacing: 2px;
+}
+
+.overlay label{
+	width: 58px;
+	height:58px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	background: url('http://tympanus.net/Development/FullscreenOverlayStyles/img/cross.png');
+	z-index: 100;
+  cursor:pointer;
+}
+.overlay nav {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	height: 60%;
+	font-size: 54px;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+
+.overlay ul li {
+	display: block;
+	height: 20%;
+	height: calc(100% / 5);
+	min-height: 54px;
+}
+
+.overlay ul li a {
+	font-weight: lighter;
+	display: block;
+	color: white;
+  text-decoration:none;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+  font-family: 'Arial';
+  text-transform:uppercase;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+	color: #BDBDBD;
+}
+
+.lower~.overlay-hugeinc{
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+#op:checked~.overlay-hugeinc{
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.overlay-hugeinc nav {
+	-moz-perspective: 300px;
+}
+
+.overlay-hugeinc nav ul {
+	opacity: 0.4;
+	-webkit-transform: translateY(-25%) rotateX(35deg);
+	transform: translateY(-25%) rotateX(35deg);
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+#op:checked~.overlay-hugeinc nav ul {
+	opacity: 1;
+	-webkit-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+}
+
+#op:not(:checked)~.overlay-hugeinc nav ul {
+	-webkit-transform: translateY(25%) rotateX(-35deg);
+	transform: translateY(25%) rotateX(-35deg);
+}
