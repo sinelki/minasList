@@ -4,7 +4,7 @@ if(Meteor.isClient) {
 
 Router.route('/', {
   action: function(){
-    this.render('Home');    
+    this.render('Home');
   }
 });
 
@@ -32,5 +32,24 @@ Router.route('/profile/:_id', {
   },
   action: function (){
     this.render('Profile');
+  }
+});
+
+
+Router.route('/editProfile/:id',{
+  waitOn: function(){
+    return Meteor.subscribe('Profile', this.params._id);
+  },
+  data: function(){
+    return Profiles.findOne({_id: this.params._id});
+  },
+  action: function (){
+    this.render('EditProfiles');
+  }
+});
+
+Router.route('/signIn',{
+  action: function(){
+    this.render('SignIn');
   }
 });
