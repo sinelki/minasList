@@ -18,21 +18,20 @@
       </ul>
     </nav>
   </div>
-    <!--<img id="city_art" src="/images/ml_city_art.jpg" alt="city">-->
   <div class="profile_info">
       <p id="profile_name">{{name}}</p>
-
+	
       <div class="enterInfo">
         <p id="enter-Info">COMPLETE YOUR PROFILE</p>
-	<form>
-		City:<input type="text" id="city">
-		Country: {{country}}<input type="text" id="country">
-		Position campaigning for:{{description}}<input type="text" id="position">
-		Platform:<textarea id="platform" rows="5" columns="20"></textarea>
-		<input type="submit" value="Submit for approval">
-	</form>
+
+	{{> editInfoForm}}
       </div>
   </div>
 
-    <img id="swell" src="/images/ground_swell_art.jpg" alt="swell">
+</template>
+<template name="editInfoForm">
+   <form>
+	<input type="text" name="text" placeholder="Type to add new tasks" />
+	<input type="submit" value="Update">
+   </form>
 </template>
