@@ -110,9 +110,6 @@ body {
 	margin-bottom: 2px;
 }
 
-input{
-  display:none;
-}
 .lower label{
   font-family: 'NotCourierSans';
   text-transform:uppercase;

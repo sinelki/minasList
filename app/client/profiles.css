@@ -29,7 +29,7 @@ body {
 		linear,
 		left bottom,
 		left top,
-		color-stop(0, #BDBDBD), 
+		color-stop(0, #BDBDBD),
 		color-stop(1, #D3D3D3)
 	);
 }
@@ -74,7 +74,7 @@ h1 {
 		linear,
 		left bottom,
 		left top,
-		color-stop(0, #9D0B38), 
+		color-stop(0, #9D0B38),
 		color-stop(1, #D00F4A)
 	);
 }
@@ -127,7 +127,7 @@ h1 {
 		linear,
 		left bottom,
 		left top,
-		color-stop(0, #BDBDBD), 
+		color-stop(0, #BDBDBD),
 		color-stop(1, #D3D3D3)
 	);
 }
@@ -159,7 +159,7 @@ h1 {
 		linear,
 		left bottom,
 		left top,
-		color-stop(0, #9D0B38), 
+		color-stop(0, #9D0B38),
 		color-stop(1, #D00F4A)
 	);
 	color: white;
@@ -178,9 +178,6 @@ h1 {
 	margin-bottom: 2px;
 }
 
-input{
-  display:none;
-}
 .lower label{
   font-family: 'NotCourierSans';
   text-transform:uppercase;

@@ -15,6 +15,7 @@ Meteor.methods({
         {$addToSet:{
           name:profile.name,
           country:profile.country,
+          city:profile.city,
           description:profile.description,
           posts:profile.posts
         }}
