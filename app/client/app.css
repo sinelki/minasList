@@ -217,18 +217,19 @@ input{
 
 .footer-links {
 	width: 100%;
-	height: 350px;
+	height: 200px;
 	background-color: #333333;
 }
 
 .footer-block {
 	display: inline-block;
-	width: 31%;
-	height: 200px;
+	width: 30%;
+	height: 160px;
 	color: #FFFFFF;
 	font-family: 'Josefin Sans';
 	margin-top: 15px;
 	margin-left: 15px;
+	margin-right: 15px;
 	margin-bottom: 15px;
 	font-size: 14pt;
 	white-space: normal;
@@ -241,6 +242,8 @@ input{
 	text-decoration: none;
 	font-size: 14pt;
 	font-weight: bold;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .quick-link a:hover {
@@ -248,7 +251,26 @@ input{
 }
 
 #social {
+	text-align: center;
+}
 
+#social-icon-para {
+	text-align: center;
+	margin-top: 25px;
+	margin-bottom: 5px;
+}
+
+.social-icon {
+	display: inline-block;
+	width: 70px;
+	margin-left: 15px;
+	margin-right: 15px;
+	height: 70px;
+	overflow: hidden;
+}
+
+.social-icon:hover {
+	transform: scale(1.05);
 }
 
 #contact {
