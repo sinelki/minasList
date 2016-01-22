@@ -30,10 +30,11 @@
 </template>
 <template name="editInfoForm">
    <form id="editInfo">
-	City: <input type="text" name="city" placeholder={{city}}><br>
-	Country: <input type="text" name="country" placeholder={{country}}><br>
-	Position campaigning for: <input type="text" name="position" placeholder={{description}}><br>
-	Platform: <textarea rows="5" columns="20" name="platform" placeholder={{platform}}></textarea><br>
+	Name: <input type="text" name="name" value={{name}}><br>
+	City: <input type="text" name="city" value={{city}}><br>
+	Country: <input type="text" name="country" value={{country}}><br>
+	Position campaigning for: <input type="text" name="position" value={{description}}><br>
+	Platform: <input type="text" name="platform" value={{platform}}><br>
 	 <input type="submit" value="Update">
    </form>
 </template>
