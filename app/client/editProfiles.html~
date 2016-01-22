@@ -1,0 +1,39 @@
+<template name="EDITPROFILES">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans" />
+  <img id="web_logo" src="images/minaslist-logo-web-property.png" alt="logo">
+    <input type="checkbox" id="op">
+    <div class="lower">
+    <label for="op">MENU</label>
+    </div>
+  <div class="overlay overlay-hugeinc">
+    <label for="op"></label>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/what_we_do">What We Do</a></li>
+        <li><a href="/why_we_do_it">Why We Do It</a></li>
+        <li><a href="/library">Library</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+    <img id="city_art" src="images/ml_city_art.jpg" alt="city">
+
+    <div class="header1">
+      <h1 id="profile_name">{{name}}</h1>
+    </div>
+
+      <div class="enterInfo">
+        <p id="enter-Info">COMPLETE YOUR PROFILE</p>
+	<form action="submitToAdmin" method="post">
+		City:{{city}}<input type="text" id="city">
+		Country: {{country}}<input type="text" id="country">
+		Position campaigning for:{{description}}<input type="text" id="position">
+		Platform:{{platform}}<textarea id="platform" rows="5" columns="20"></textarea>
+		<input type="submit" value="Submit for approval">
+	</form>
+      </div>
+
+    <img id="swell" src="images/ground_swell_art.jpg" alt="swell">
+</template>

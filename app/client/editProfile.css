@@ -1,4 +1,4 @@
-/* CSS declarations go here */
+/* EDITPROFILE CSS declarations go here */
 @import "http://webfonts.ru/import/notcourier.css";
 body {
 	background-color: #FFFFFF;
@@ -220,3 +220,10 @@ body {
 	-webkit-transform: translateY(25%) rotateX(-35deg);
 	transform: translateY(25%) rotateX(-35deg);
 }
+
+#editInfo {
+display: input {
+	display: block;
+}
+}
+

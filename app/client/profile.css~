@@ -1,73 +1,99 @@
-/* APP CSS declarations go here */
+/* CSS declarations go here */
 @import "http://webfonts.ru/import/notcourier.css";
-
 body {
 	background-color: #FFFFFF;
-}
-h1 {
-	color: #FFFFFF;
-	font-family: 'Josefin Sans';
-	font-size: 22pt;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-}
-.header1 {
-	background-color: #D00F4A;
-	width: 100%;
-	height: 10%;
-	text-align: center;
-	margin-top: 10px;
-	margin-left: 0px;
-	padding-top: 8px;
 }
 #web_logo {
 	text-align: left;
 	position: relative;
 }
-#shinkai_art {
+
+.panel {
+	background-color: #D00F4A;
+	color: #FFFFFF;
+	height: 1000px;
+	width: 300px;
+	box-shadow: 5px 5px 2px #333333;
+}
+#profile_photo {
+	width: 120px;
+	height: 120px;
+	border-radius: 4px;
+	padding-top: 10px;
+	vertical-align: middle;
+	margin-left: 90px;
+	margin-right: 90px;
+	margin-top: 50px;
+}
+.profile_info {
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#profile_name {
 	text-align: center;
-	position: relative;
-	width: 70px;
-	height: 70px;
-}
-#city_art {
-	text-align: center;
-	width: 100%;
-	margin-top: 5px;
-}
-.mission {
-	display: inline-block;
-}
-#background-info {
-	font-family: 'Tahoma';
-	font-size: 14pt;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	text-align: left;
-	color: #333333;
-	padding: 1px 1px 4px 4px;
-	width: 500px;
-	margin-top: 0px;
-}
-#our-mission {
-	color: #D8507A;
+	text-transform: uppercase;
 	font-family: 'Josefin Sans';
+	font-weight: bold;
 	font-size: 16pt;
+}
+#bullet_panel {
+	height: 100px;
+	width: 260px;
+	margin-bottom: 20px;
+	background-color: #929497;
+	box-shadow: 5px 5px 2px #333333;
+}
+.profile_bullets {
+	font-family: 'Tahoma';
 	text-align: left;
-	margin-left: 4px;
+	padding-top: 10px;
+	list-style-type: none;
+	font-size: 11pt;
+	padding-left: 10px;
+	font-weight: lighter;
 }
-#swell {
-	margin-top: 5px;
-	margin-left: 5px;
-	width: 100%;
-	height: 400px;
-	text-align: bottom;
+.profile_bullets li {
+	padding-bottom: 10px;
 }
+
+#description_panel {
+	height: 300px;
+	width: 260px;
+	text-align: left;
+	background-color: #929497;
+	box-shadow: 5px 5px 2px #333333;
+}
+
+#description_paragraph {
+	font-family: 'Tahoma';
+	font-size: 11pt;
+	font-weight: lighter;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+
 .lower {
 	background-color: #D00F4A;
-	border: none;
+	border: 1px solid #B37D00;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+	background-image: linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+	background-image: -o-linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+	background-image: -moz-linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+	background-image: -webkit-linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+	background-image: -ms-linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #9D0B38), 
+		color-stop(1, #D00F4A)
+	);
 	color: white;
 	font-family: 'Arial';
 	padding: 15px 32px;
@@ -83,6 +109,7 @@ h1 {
 	margin-right: 5px;
 	margin-bottom: 2px;
 }
+
 .lower label{
   font-family: 'NotCourierSans';
   text-transform:uppercase;

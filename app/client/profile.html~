@@ -1,0 +1,10 @@
+<head>
+	<script src="profile.js"></script>
+	<link rel="stylesheet" type="text/css" href="profile.css" media="screen">		
+</head>
+<body>
+	<h1>PERSON'S NAME FROM LOGIN GOES HERE</h1>
+	<div id="candidateInput">
+		Platform:<input type="text" id="platform">
+	</div>		
+</body>
