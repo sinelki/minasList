@@ -1,4 +1,4 @@
-/* PROFILE CSS declarations go here */
+/* CSS declarations go here */
 @import "http://webfonts.ru/import/notcourier.css";
 body {
 	background-color: #FFFFFF;

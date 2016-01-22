@@ -1,6 +1,7 @@
 <template name="EditProfiles">
   <!--<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans" />-->
   <img id="web_logo" src="/images/minaslist-logo-web-property.png" alt="logo">
+    <input type="checkbox" id="op">
     <div class="lower">
     <label for="op">MENU</label>
     </div>
