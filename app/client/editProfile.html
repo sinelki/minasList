@@ -1,5 +1,5 @@
 <template name="EditProfiles">
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans" />
+  <!--<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans" />-->
   <img id="web_logo" src="/images/minaslist-logo-web-property.png" alt="logo">
     <input type="checkbox" id="op">
     <div class="lower">
@@ -31,7 +31,9 @@
 </template>
 <template name="editInfoForm">
    <form>
-	<input type="text" name="text" placeholder="Type to add new tasks" />
-	<input type="submit" value="Update">
+	City: <input type="text" name="city" placeholder={{city}}><br>
+	Country: <input type="text" name="country" placeholder={{country}}><br>
+	Position campaigning for: <input type="text" name="position" placeholder={{description}}><br>
+	 <input type="submit" value="Update">
    </form>
 </template>

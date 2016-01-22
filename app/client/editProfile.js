@@ -1,11 +1,14 @@
 if (Meteor.isClient) {
-    Template.EDITPROFILES.events({
+    Template.editInfoForm.events({
     'submit form': function(event){
       event.preventDefault();
-      var playerNameVar = event.target.playerName.value;
-      PlayersList.insert({
-          name: playerNameVar,
-          score: 0
+      var cityVar = event.target.city.value;
+      var countryVar = event.target.country.value;
+      var positionVar = event.target.position.value;
+      Profiles.insert({
+          city: cityVar,
+	  country: countryVar,
+	  description: positionVar
       });
     }
   });
