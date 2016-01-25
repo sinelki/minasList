@@ -20,17 +20,17 @@
   <div class="panel">
       <p id="profile_name">{{name}}</p>
 	
-      <div class="enterInfo">
+      <p id="enterInfo">
         <p id="enter-Info">COMPLETE YOUR PROFILE</p>
 
 	{{> editInfoForm}}
-      </div>
+      </p>
   </div>
 
 </template>
 <template name="editInfoForm">
    <form id="editInfo">
-	Name: <input type="text" name="city" value={{name}}><br>
+	Name: <input type="text" name="name" value={{name}}><br>
 	City: <input type="text" name="city" value={{city}}><br>
 	Country: <input type="text" name="country" value={{country}}><br>
 	Position campaigning for: <input type="text" name="position" value={{description}}><br>

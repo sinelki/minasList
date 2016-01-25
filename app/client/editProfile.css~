@@ -221,7 +221,13 @@ body {
 	transform: translateY(25%) rotateX(-35deg);
 }
 
-input {
+#editInfo {
+display: input {
 	display: block;
+}
+}
+
+.enterInfo {
+	text-align: center;
 }
 
