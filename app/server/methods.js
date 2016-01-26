@@ -9,9 +9,10 @@ Meteor.methods({
     /*if (! Meteor.userId() || (Meteor.userId()!==profile.owner)) {
       throw new Meteor.Error("not-authorized");
     }*/
+	console.log("hello");
     if (Profiles.findOne({owner: Meteor.userId()})){
       Profiles.update(
-        {owner: Meteor.userId},
+        {owner: Meteor.userId()},
         {$set:{
           name:profile.name,
           country:profile.country,
@@ -27,6 +28,6 @@ Meteor.methods({
 	console.log(profile.owner, profile)
       Profiles.insert(profile);
     }
-	console.log(Profiles.find({}));
+	console.log(Profiles.findOne({name:profile.name}));
   }
 });

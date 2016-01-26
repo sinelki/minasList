@@ -63,7 +63,7 @@ Router.route('/editProfile/:_id',{
     return Meteor.subscribe('Profile', this.params._id);
   },
   data: function(){
-    return Profiles.findOne({_id: this.params._id});
+    return Profiles.findOne({owner: this.params._id});
   },
   action: function (){
     this.render('EditProfiles');

@@ -60,5 +60,5 @@ Meteor.publish('Profiles', function(query) {
 });
 
 Meteor.publish('Profile', function(id){
-  return Profiles.find({_id:id});sdhjyktu
+  return Profiles.find({owner:id});
 })

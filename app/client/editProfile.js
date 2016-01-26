@@ -23,7 +23,7 @@ if (Meteor.isClient) {
 	console.log(dateVar);
 	console.log({name: nameVar, date: dateVar, country: countryVar, city: cityVar, description: positionVar, posts: [], owner: ownerVar});
 	Meteor.call("updateProfile",{name: nameVar, date: dateVar, country: countryVar, city: cityVar, description: positionVar, posts: [], owner: ownerVar, buttonID: buttonIDVar});
-	console.log(Profiles);
+	console.log(Profiles.find({}));
     }
 	
   });
