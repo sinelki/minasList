@@ -1,10 +1,38 @@
-<head>
-	<script src="profile.js"></script>
-	<link rel="stylesheet" type="text/css" href="profile.css" media="screen">		
-</head>
-<body>
-	<h1>PERSON'S NAME FROM LOGIN GOES HERE</h1>
-	<div id="candidateInput">
-		Platform:<input type="text" id="platform">
-	</div>		
-</body>
+<template name="Profile">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans" />
+	<img id="web_logo" src="/images/minaslist-logo-web-property.png" alt="logo">
+    <input type="checkbox" id="op">
+    <div class="lower">
+    	<label for="op">MENU</label>
+    </div>
+  <div class="overlay overlay-hugeinc">
+    <label for="op"></label>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/what_we_do">What We Do</a></li>
+        <li><a href="/why_we_do_it">Why We Do It</a></li>
+        <li><a href="/library">Library</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="panel">
+  	<img id="profile_photo" src="/images/Insert-Photo-Here.jpg" alt="profile photo">
+  	<div class="profile_info">
+  		<p id="profile_name">{{name}}</p>
+  		<div id="bullet_panel">
+  			<ul class="profile_bullets">
+				<li>City: {{city}}</li>
+  				<li>Country: {{country}}</li>
+  				<li>Year Joined: {{year}}</li>
+  				<li>Position: {{description}}</li>
+  			</ul>
+  		</div>
+  		<div id="description_panel"><p id="description_paragraph">{{posts}}</p></div>
+  	</div>
+  </div>
+
+</template>

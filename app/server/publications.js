@@ -16,17 +16,18 @@ if(!userId){
 */
 var userId=Meteor.users.findOne({username: 'user'});
 
-/*Profiles.schema = new SimpleSchema({
+Profiles.schema = new SimpleSchema({
   name: {type: String},
   date: {type: Date},
   country: {type: String},
   city: {type: String},
   description: {type: String},
   posts: {type: [String]},
-  owner: {type: String}
+  owner: {type: String},
+  buttonID: {type: String}
 });
 
-Profiles.attachSchema(Profiles.schema);*/
+Profiles.attachSchema(Profiles.schema);
 
 var profile = Profiles.findOne({name: 'Shinkai Karokhail'});
 

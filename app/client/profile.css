@@ -38,7 +38,7 @@ body {
 	font-size: 16pt;
 }
 #bullet_panel {
-	height: 100px;
+	height: 120px;
 	width: 260px;
 	margin-bottom: 20px;
 	background-color: #929497;
@@ -58,7 +58,7 @@ body {
 }
 
 #description_panel {
-	height: 300px;
+	height: 350px;
 	width: 260px;
 	text-align: left;
 	background-color: #929497;
