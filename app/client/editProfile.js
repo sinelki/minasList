@@ -1,5 +1,5 @@
 if (Meteor.isClient) {
-    Template.EditProfiles.events({
+    Template.editInfoForm.events({
     'submit form': function(event){
       event.preventDefault();
       var nameVar = event.target.name.value;
@@ -13,6 +13,7 @@ if (Meteor.isClient) {
       var countryVar = event.target.country.value;
       var positionVar = event.target.position.value;
       var platformVar = event.target.platform.value;
+      var buttonIDVar = event.target.buttonID.value;
       /*Profiles.insert({
           city: cityVar,
 	  country: countryVar,
@@ -21,10 +22,26 @@ if (Meteor.isClient) {
       });*/
 	console.log(dateVar);
 	console.log({name: nameVar, date: dateVar, country: countryVar, city: cityVar, description: positionVar, posts: [], owner: ownerVar});
-	Meteor.call("updateProfile",{name: nameVar, date: dateVar, country: countryVar, city: cityVar, description: positionVar, posts: [], owner: ownerVar});
+	Meteor.call("updateProfile",{name: nameVar, date: dateVar, country: countryVar, city: cityVar, description: positionVar, posts: [], owner: ownerVar, buttonID: buttonIDVar});
 	console.log(Profiles);
     }
 	
+  });
+
+  Template.addPicForm.events({
+  'submit form': function(e, template) {
+    e.preventDefault();
+    var file = template.find('input type=["file"]').files[0];
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      // Add it to your model
+      model.update(id, { $set: { src: e.target.result }});
+
+      // Update an image on the page with the data
+      $(template.find('img')).attr('src', e.target.result);
+    }
+    reader.readAsDataURL(file);
+  }
   });
 
 }
