@@ -18,7 +18,8 @@ Meteor.methods({
           city:profile.city,
           description:profile.description,
           posts:profile.posts,
-	  owner: Meteor.userId()
+	  owner: Meteor.userId(),
+	  buttonID:profile.buttonID
         }}
       );
     } else {

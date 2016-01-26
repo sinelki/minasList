@@ -1,0 +1,27 @@
+{
+  "name": "minasList",
+  "version": "0.0.0",
+  "description": "Fundraising app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sinelki/minasList.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/sinelki/minasList/issues"
+  },
+  "dependencies": {
+    "xtend": "~4.0.1",
+    "cookie-parser": "~1.4.0",
+    "csurf": "~1.8.3",
+    "express": "~4.13.3",
+    "forms": "~1.1.4",
+    "jade": "~1.11.0",
+    "express-stormpath": "~2.3.4"
+  }
+}

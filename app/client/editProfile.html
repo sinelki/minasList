@@ -1,6 +1,7 @@
 <template name="EditProfiles">
   <!--<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans" />-->
   <img id="web_logo" src="/images/minaslist-logo-web-property.png" alt="logo">
+  <input type="checkbox" id="op">
     <div class="lower">
     <label for="op">MENU</label>
     </div>
@@ -22,19 +23,34 @@
 	
       <p id="enterInfo">
         <p id="enter-Info">COMPLETE YOUR PROFILE</p>
-
+	{{> addPicForm}}
 	{{> editInfoForm}}
       </p>
   </div>
 
 </template>
+
+<template name="addPicForm">
+   <form id="addPic">
+	
+   </form>
+</template>
+
 <template name="editInfoForm">
    <form id="editInfo">
-	Name: <input type="text" name="name" value={{name}}><br><br>
-	City: <input type="text" name="city" value={{city}}><br><br>
-	Country: <input type="text" name="country" value={{country}}><br><br>
-	Position campaigning for: <input type="text" name="position" value={{description}}><br><br>
-	Platform: <textarea rows="5" columns="20" type="text" name="platform" value={{platform}}></textarea><br><br>
+	Name:<br><input type="text" name="name" value={{name}}><br><br>
+	City:<br><input type="text" name="city" value={{city}}><br><br>
+	Country:<br><input type="text" name="country" value={{country}}><br><br>
+	Position campaigning for:<br><input type="text" name="position" value={{description}}><br><br>
+	Platform:<br><textarea rows="5" columns="20" type="text" name="platform" value={{platform}}></textarea><br><br>
+	Button ID:<br><input type="text" name="buttonID" placeholder={{buttonID}}><br><br><br>
+	To find your Button ID,<br>
+	<ul style="list-style-type:circle">
+  		<li>Login to your <a href="https://www.paypal.com/signin/">PayPal Account</a></li>
+  		<li>Lol, I forgot the other steps, and I don't want to create my own account</li>
+  		<li>Copy the Button ID and paste it here</li>
+	</ul>
+	
 	 <input type="submit" value="Update">
    </form>
 </template>
