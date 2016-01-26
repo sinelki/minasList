@@ -267,6 +267,7 @@ input{
 	margin-right: 15px;
 	height: 70px;
 	overflow: hidden;
+	vertical-align: center;
 }
 
 .social-icon:hover {
