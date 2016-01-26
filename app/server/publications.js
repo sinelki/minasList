@@ -1,19 +1,34 @@
 Profiles = new Mongo.Collection('Profiles');
 
-var userId=Meteor.users.findOne({email: 'user@gmail.com'});
+var userId=Meteor.users.findOne({"emails.address": 'user@gmail.com'});
 
-console.log(Meteor.users.find({}));
+//console.log(Meteor.users.find({}));
 
 console.log(userId);
 
-/*
-if(!userId){
+
+if( userId === undefined){
   Accounts.createUser({
     email: 'user@gmail.com',
     password: 'pass'
   });
 }
-*/
+
+var userId=Meteor.users.findOne({"emails.address": 'admin@gmail.com'});
+
+//console.log(Meteor.users.find({}));
+
+console.log(userId);
+
+
+if( userId === undefined){
+  Accounts.createUser({
+    user: 'admin',
+    email: 'admin@gmail.com',
+    password: 'pass'
+  });
+}
+
 var userId=Meteor.users.findOne({username: 'user'});
 
 Profiles.schema = new SimpleSchema({

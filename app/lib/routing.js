@@ -70,8 +70,8 @@ Router.route('/editProfile/:_id',{
   }
 });
 
-Router.route('/signIn',{
+Router.route('/login',{
   action: function(){
-    this.render('SignIn');
+    this.render('login');
   }
 });
