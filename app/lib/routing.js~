@@ -58,7 +58,7 @@ Router.route('/profile/:_id', {
 });
 
 
-Router.route('/editProfile/:_id',{
+Router.route('/editProfile/:id',{
   waitOn: function(){
     return Meteor.subscribe('Profile', this.params._id);
   },

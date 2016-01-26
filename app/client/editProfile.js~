@@ -2,12 +2,10 @@ if (Meteor.isClient) {
     Template.EditProfiles.events({
     'submit form': function(event){
       event.preventDefault();
-      var nameVar = event.target.name.value;
+      var nameVar = this.name;
       console.log(nameVar);
+      //var idVar = this.id;
       var dateVar = this.date;
-      if (!this.date) {
-      	dateVar = new Date();
-      }
       var ownerVar = this.owner;
       var cityVar = event.target.city.value;
       var countryVar = event.target.country.value;
