@@ -1,50 +1,26 @@
 <template name="Profiles">
 	<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Josefin+Sans' />
 	{{> header}}
+
   {{>profileHeaders}}
-  <!--<div class="profile-list">
-  	<div class="user-profile">
-  		<h3 class="user-name">Profile 1</h3>
-  	</div>
-  	<div class="user-profile">
-  		<h3 class="user-name">Profile 2</h3>
-  	</div>
-  	<span class="stretch"></span>
-  </div>-->
-  {{data}}
+
+  {{name}}
+  
   {{> footer}}
-</template>
-
-<template name="hello">
-  <button class="clickable">Click me</button>
-
-  <div id="make-visible" style="display: none">I'm here now</div>
 </template>
 
 <template name="profileHeaders">
   <div class="profiles-header">
     <h1 id="members-header">Our Members</h1>
-    <div class="profiles-buttons">
-      <!--<button id="all-profiles">
-        Latest Profiles
-      </button>
-      <button id="filter-by">
-        Filter Profiles
-      </button>-->
-  <!--</div>
-  <div id="filter-profile-block" style="display: none">-->
-    <form>Name:
+    <form>Filter By:
       <select id="dropdown-content" class="filter-pick" name="dropdown">
         <option value="default" selected="selected">Please select a field</option>
         <option value="country">Country</option>
         <option value="name">Name</option>
-        <option value="color">Color</option>
       </select>
       <input type="text" class="filter-pick" id="choice" name="choice" placeholder="Search Mina's List">
       <button id="submit" class="filter-pick">Go</button>
     </form>
-
-    </div>
   </div>
 </template>
 

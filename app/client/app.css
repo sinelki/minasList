@@ -54,10 +54,10 @@ h1 {
 	);
 }
 
-.profiles-buttons {
+/*.profiles-buttons {
 	width: 100%;
 	height: 80px;
-}
+}*/
 
 #all-profiles, #filter-by {
 	display: inline-block;
