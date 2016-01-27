@@ -23,7 +23,7 @@ console.log(userId);
 
 if( userId === undefined){
   Accounts.createUser({
-    user: 'admin',
+    username: 'admin',
     email: 'admin@gmail.com',
     password: 'pass'
   });
