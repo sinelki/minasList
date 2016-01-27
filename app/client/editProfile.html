@@ -1,26 +1,10 @@
 <template name="EditProfiles">
   <!--<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans" />-->
-  <img id="web_logo" src="/images/minaslist-logo-web-property.png" alt="logo">
-  <input type="checkbox" id="op">
-    <div class="lower">
-    <label for="op">MENU</label>
-    </div>
-  <div class="overlay overlay-hugeinc">
-    <label for="op"></label>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/what_we_do">What We Do</a></li>
-        <li><a href="/why_we_do_it">Why We Do It</a></li>
-        <li><a href="/library">Library</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
-      </ul>
-    </nav>
-  </div>
+  {{> nav}}
+
   <div class="panel">
       <p id="profile_name">{{name}}</p>
-	
+
       <p id="enterInfo">
         <p id="enter-Info">COMPLETE YOUR PROFILE</p>
 	{{> addPicForm}}
@@ -32,7 +16,7 @@
 
 <template name="addPicForm">
    <form id="addPic">
-	
+
    </form>
 </template>
 
@@ -50,7 +34,7 @@
   		<li>Lol, I forgot the other steps, and I don't want to create my own account</li>
   		<li>Copy the Button ID and paste it here</li>
 	</ul>
-	
+
 	 <input type="submit" value="Update">
    </form>
 </template>
