@@ -2,16 +2,16 @@
 	<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Josefin+Sans' />
   {{> header}}
   <img id="city_art" src="images/ml_shinkai_art.jpg" alt="shinkai">
-  <div class="header-homepage">
+  <!--<div class="header-homepage">
     <h1>EMPOWERING WOMEN'S POLITICAL LEADERSHIP GLOBALLY</h1>
-  </div>
+  </div>-->
 
   <div class="about_us">
-    <div class="what-we-do-wrapper">
+    <div id="what-we-do-wrapper" class="about-wrapper">
     	<h2>WHAT WE DO</h2>
     	<p>Mina's List works collaboratively with regional women’s rights organizations and current women legislators to provide culturally relevant, country-specific educational and capacity-building resources to aspiring women political leaders.</p>
     </div>
-    <div class="library-work-wrapper">
+    <div id="library-work-wrapper" class="about-wrapper">
     	<div class="lib-work-block-wrapper" id="lib-wrapper">
     		<h3>LIBRARY</h3>
     		<p id="first">Our library includes tool-kits to promote successful political campaign strategies, leadership development, and capacity building, plus international women’s rights treaties and model national implementation plans for advancing women’s rights.</p>
@@ -28,29 +28,29 @@
     		<p id="second">The Mina’s List collaborative workshop model strengthens relationships and increases accountability between our partner organizations and their women political leaders.</p>
     	</div>
     </div>
-    <div class="mentor-wrapper">
+    <div id="what-do-buttons" class="about-wrapper">
+    	<a href="http://minaslist.org/library/"><button id="lib-btn">Library</button></a>
+    	<a href="http://minaslist.org/what/workshops/"><button id="workshop-btn">Workshops</button></a>
+    	<a href="http://minaslist.org/blog/"><button id="blog-btn">Blog</button></a>
+    </div>
+    <div id="mentor-wrapper" class="about-wrapper">
     	<h3>MENTORSHIP & OUTREACH</h3>
     	<p id="first">Our Mentorship Program pairs women politicians who have successfully advanced women's rights with aspiring women political leaders. Mentors provide support and advice throughout the entire political process.</p>
     	<p id="second">Our blog and social media channels share news about women's political efforts around the world and highlight the work of partner organizations to politically empower women. Mina's List believes in fostering a sense of solidarity as we support women's increased political representation around the globe.</p>
     </div>
-    <div class="what-do-buttons">
-    	<button id="lib-btn"><a href="http://minaslist.org/library/">Library</a></button>
-    	<button id="workshop-btn"><a href="http://minaslist.org/what/workshops/">Workshops</a></button>
-    	<button id="blog-btn"><a href="http://minaslist.org/blog/">Blog</a></button>
-    </div>
-    <div id="shinkai-quote">
+    <div id="shinkai-quote" class="about-wrapper">
     	<p id="quote">"We need women with a vision, women who are really committed to changing the lives of other women...If we do not bring women into politics, if we do not increase their number, if we do not have a specific agenda, I do not think our political counterparts will be willing to listen. So who is going to do that? The best way is to have strong, committed, mission-driven women inside the parliament to lobby, advocate, and claim the rights of half the population."</p>
 		<p id="author"> - The Hon. Shinkai Karokhail</p>
     </div>
-    <div class="why-wrapper">
-    	<h3>WHY WE DO IT</h3>
+    <div id="why-wrapper" class="about-wrapper">
+    	<h2>WHY WE DO IT</h2>
     	<p id="first">Women make up less than 20 percent of parliamentarians around the world, and in thirty seven states women account for less than 10 percent of representatives in single or lower houses.</p>
     	<p id="second">The 2011 UN General Assembly resolution on women’s political participation notes: 
 “Women in every part of the world continue to be largely marginalized from the political sphere, often as a result of discriminatory laws, practices, attitudes and gender stereotypes, low levels of education, lack of access to health care, and the disproportionate effect of poverty on women.”</p>
     	<p id="third">Even when elected to national government, women policy-makers may lack the sufficient skills or willingness to address issues of gender equality. This is why Mina’s List is working towards equal and substantive representation, which means that women parliamentarians are both willing and able to advocate for women’s interests in the political arena.</p>
     	<p id="fourth">The presence of women in government is important not only to secure the equal rights of women, but for the nature of governance itself. Research shows that when women are empowered as political leaders, more laws are passed to promote women’s rights and countries experience higher standards of living, including positive developments in education, infrastructure and health, and tangible gains for democratic governance, such as decreased corruption, greater cooperation across party and ethnic lines, and more sustainable peace. For example:</p>
     </div>
-    <div class="stats-wrapper">
+    <div id="stats-wrapper" class="about-wrapper">
     	<div class="bullet-stats" id="first-stats-list">
     		<ul id="left-list" class="stats-list">
     			<li>In Argentina, despite representing only 14 percent of deputies, female parliamentarians introduced no fewer than 78 percent of the bills related to women’s rights. (<a href="http://minaslist.org/library-assets/pub-a-10.pdf">Read More</a>)</li>
@@ -68,6 +68,10 @@
     		</ul>
     	</div>
     	<p>Empowering women’s political leadership will have a ripple effect on every level of society and the global condition.</p>
+    </div>
+    <div id="who-not-wrapper" class="about-wrapper">
+    	<p id="first">Mina’s List is not affiliated with any government institutions or political parties. Mina’s List does not choose, influence, or directly support any political candidate, rather we provided resources to local grassroots women’s organization who are working to elect women to national government.</p>
+    	<p id="second">Mina’s List does not accept funds from any government or political entity.</p>
     </div>
   </div>
   {{> footer}}
