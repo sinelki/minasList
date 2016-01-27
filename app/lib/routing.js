@@ -8,6 +8,12 @@ Router.route('/', {
   }
 });
 
+Router.route('/admin',{
+  action: function(){
+    this.render('adminOfProfiles')
+  }
+});
+
 Router.route('/profiles', {
   action: function() {
     this.render('Profiles');

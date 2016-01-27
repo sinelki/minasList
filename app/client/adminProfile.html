@@ -1,31 +1,15 @@
 <template name="adminOfProfiles">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans" />
-  <img id="web_logo" src="images/minaslist-logo-web-property.png" alt="logo">
-    <input type="checkbox" id="op">
-    <div class="lower">
-    <label for="op">MENU</label>
-    </div>
-  <div class="overlay overlay-hugeinc">
-    <label for="op"></label>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/what_we_do">What We Do</a></li>
-        <li><a href="/why_we_do_it">Why We Do It</a></li>
-        <li><a href="/library">Library</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
-      </ul>
-    </nav>
+  {{> nav}}
+  <img id="city_art" src="images/ml_city_art.jpg" alt="city">
+  <!--Start of edits-->
+  <div class="header1">
+    <h1 id="userName">ADMIN'S NAME GOES HERE</h1>
   </div>
-    <img id="city_art" src="images/ml_city_art.jpg" alt="city">
-    <!--Start of edits-->
-    <div class="header1">
-      <h1 id="userName">ADMIN'S NAME GOES HERE</h1>
-    </div>
-      <div class="review">
-        <p id="review-Info">I guess there would be a pulldown of each candidate</p>
+  <div class="review">
+    <p id="review-Info">I guess there would be a pulldown of each candidate</p>
 
-      </div>
-    <img id="swell" src="images/ground_swell_art.jpg" alt="swell">
+  </div>
+  <img id="swell" src="images/ground_swell_art.jpg" alt="swell">
+  {{> footer}}
 </template>
