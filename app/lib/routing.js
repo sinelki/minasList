@@ -9,26 +9,18 @@ Router.route('/', {
 });
 
 Router.route('/admin',{
-  action: function(){
-    this.render('adminOfProfiles')
+  action: function (){
+    if (Meteor.userId()===Meteor.users.findOne({username:'admin'})._id){
+      this.render('adminOfProfiles');
+    } else{
+      Router.go('/login');
+    }
   }
 });
 
 Router.route('/profiles', {
   action: function() {
     this.render('Profiles');
-  }
-});
-
-Router.route('/what_we_do', {
-  action: function() {
-    this.render('What');
-  }
-});
-
-Router.route('/why_we_do_it', {
-  action: function() {
-    this.render('Why');
   }
 });
 
@@ -69,15 +61,27 @@ Router.route('/editProfile/:_id',{
     return Meteor.subscribe('Profile', this.params._id);
   },
   data: function(){
-    return Profiles.findOne({owner: this.params._id});
+    if (Meteor.userId()===this.params._id){
+      return Profiles.findOne({owner: this.params._id});
+    }
   },
   action: function (){
-    this.render('EditProfiles');
+    if (Meteor.userId()===this.params._id){
+      this.render('EditProfiles');
+    } else{
+      Router.go('/login');
+    }
   }
 });
 
 Router.route('/login',{
   action: function(){
+    if (Meteor.userId()===Meteor.users.findOne({username:'admin'})._id){
+      Router.go('/admin');
+    }
+    else if(Meteor.userId()){
+      Router.go('/profile/'+Meteor.userId());
+    }
     this.render('login');
   }
 });
