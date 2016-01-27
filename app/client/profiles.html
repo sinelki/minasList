@@ -11,7 +11,7 @@
   	</div>
   	<span class="stretch"></span>
   </div>-->
-
+  {{data}}
   {{> footer}}
 </template>
 
@@ -25,16 +25,16 @@
   <div class="profiles-header">
     <h1 id="members-header">Our Members</h1>
     <div class="profiles-buttons">
-      <button id="all-profiles">
+      <!--<button id="all-profiles">
         Latest Profiles
       </button>
       <button id="filter-by">
         Filter Profiles
-      </button>
+      </button>-->
   <!--</div>
   <div id="filter-profile-block" style="display: none">-->
     <form>Name:
-      <select id="dropdown-content" class="filter-pick" name="">
+      <select id="dropdown-content" class="filter-pick" name="dropdown">
         <option value="default" selected="selected">Please select a field</option>
         <option value="country">Country</option>
         <option value="name">Name</option>
@@ -43,6 +43,7 @@
       <input type="text" class="filter-pick" id="choice" name="choice" placeholder="Search Mina's List">
       <button id="submit" class="filter-pick">Go</button>
     </form>
+
     </div>
   </div>
 </template>

@@ -39,10 +39,23 @@ Router.route('/profiles/:country', {
     return Meteor.subscribe('Profiles', {country: this.params.country})
   },
   data: function(){
-    return Profiles.find({country: this.params.country})
+    /*return {data: Profiles.find({})};*/
+    return {data: "monkey"};
+    if (this.params.dropdown === "country") {
+      var result = Profiles.find({country: {$regex: /this.params.choice/i}});
+      /*console.log(x);
+      return x;*/
+      return {data: result};
+    }
+    else if (this.params.dropdown === "name") {
+       var result = Profiles.find({name: {$regex: /this.params.choice/i}});
+       return {data: result};
+    }
   },
   action: function () {
     this.render('Profiles')
+    console.log("action data");
+    console.log(this.getData());
   }
 });
 

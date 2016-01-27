@@ -38,3 +38,8 @@ Template.profileHeaders.helpers({
 		console.log("You have selected " + key);
 	}
 });
+
+Template.Profiles.rendered = function() {
+	console.log("data");
+	console.log(this);
+}
