@@ -1,21 +1,7 @@
 <template name="Profiles">
 	<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Josefin+Sans' />
 	{{> nav}}
-  <div class="profiles-header">
-  	<h1 id="members-header">Our Members</h1>
-  	<div class="profiles-buttons">
-  		<div id="all-profiles">
-  			Latest Profiles
-  		</div>
-  		<div id="filter-by">
-  			Filter Profiles
-  		</div>
-  		<!--<input id="myButton" type="button" value="Example only Javascript" />-->
-  		<div id="create-new">
-  			Create a Profile
-  		</div>
-  	</div>
-  </div>
+  {{>profileHeaders}}
   <div class="profile-list">
   	<div class="user-profile">
   		<h3 class="user-name">Profile 1</h3>
@@ -26,5 +12,40 @@
   	<span class="stretch"></span>
   </div>
 
-	{{> footer}}
+  {{> footer}}
+</template>
+
+<template name="hello">
+  <button class="clickable">Click me</button>
+
+  <div id="make-visible" style="display: none">I'm here now</div>
+</template>
+
+<template name="profileHeaders">
+  <div class="profiles-header">
+    <h1 id="members-header">Our Members</h1>
+    <div class="profiles-buttons">
+      <button id="all-profiles">
+        Latest Profiles
+      </button>
+      <button id="filter-by">
+        Filter Profiles
+      </button>
+    </div>
+  </div>
+  <div id="filter-profile-block" style="display: none">
+    <div class="filter-pick" id="dropdown">
+      <button class="dropbtn">Select Filter</button>
+      <select class="dropdown-content">
+        <option value="default">Please select a field</option>
+        <option value="country">Country</option>
+        <option value="name">Name</option>
+        <option value="color">Color</option>
+      </select>
+    </div>
+    <form class="filter-pick">Name:
+      <input type="text" id="choice" name="Choice" placeholder="Search Mina's List">
+      <input type="submit" value="Go">
+    </form>
+  </div>
 </template>
