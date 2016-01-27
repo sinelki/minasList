@@ -22,6 +22,18 @@ Template.profileHeaders.events({
 			filterForm.style.display = "none";
 		}
 	}
+});
 
-	
+Template.profilesHeaders.helpers({
+	filter: function() {
+		// this helper returns a cursor of all of the profiles 
+		// in the collection
+		var drop = document.getElementById("dropdown-content");
+		var key = drop.options[drop.selectedIndex].value;
+		var textbox = document.getElementById("choice");
+		var value = textbox.value;
+		var selector = {};
+		selector[key] = value;
+		return Profiles.find(selector).fetch();
+	}
 });
