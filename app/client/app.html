@@ -1,61 +1,44 @@
 <template name="Home">
   <link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Josefin+Sans' />
-  <a href="/"><img id="web_logo" src="images/minaslist-logo-web-property.png" alt="logo"></a>
-    <input type="checkbox" id="op">
-    <div class="lower">
-    <label for="op">MENU</label>
-    </div>
-  <div class="overlay overlay-hugeinc">
-    <label for="op"></label>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/what_we_do">What We Do</a></li>
-        <li><a href="/why_we_do_it">Why We Do It</a></li>
-        <li><a href="/profiles">Profiles</a></li>
-        <li><a href="/about">About</a></li>
-      </ul>
-    </nav>
+  {{> nav}}
+  <img id="city_art" src="images/ml_city_art.jpg" alt="city">
+  <div class="header-homepage">
+    <h1>EMPOWERING WOMEN'S POLITICAL LEADERSHIP GLOBALLY</h1>
   </div>
-    <img id="city_art" src="images/ml_city_art.jpg" alt="city">
-    <div class="header-homepage">
-      <h1>EMPOWERING WOMEN'S POLITICAL LEADERSHIP GLOBALLY</h1>
+  <div class="login_and_mission">
+
+    <div class="mission">
+      <p id="our-mission">OUR MISSION</p>
+        <p id="background-info">Mina's List seeks to realize women’s equal and substantive representation in national governments around the world.</p>
+        <p id="background-info">
+        Research shows that more women in government leads to increased protection of women's rights and higher standards of living for all people. Mina’s List provides the educational tools and resources to achieve women’s equal political participation globally.</p>
+        <p id="background-info">Through supporting Mina's List, you can help make this happen.</p>
     </div>
+  </div>
 
-    <div class="login_and_mission">
+  {{#if currentUser}}
+    {{> dashboard}}
+  {{/if}}
 
-      <div class="mission">
-        <p id="our-mission">OUR MISSION</p>
-          <p id="background-info">Mina's List seeks to realize women’s equal and substantive representation in national governments around the world.</p>
-          <p id="background-info">
-          Research shows that more women in government leads to increased protection of women's rights and higher standards of living for all people. Mina’s List provides the educational tools and resources to achieve women’s equal political participation globally.</p>
-          <p id="background-info">Through supporting Mina's List, you can help make this happen.</p>
-      </div>
+  <div class="footer-links">
+    <div class="footer-block" id="quick">QUICK LINKS
+      <p class="quick-link"><a href="http://minaslist.org/library/">Library</a></p>
+      <p class="quick-link"><a href="http://minaslist.org/partner-orgs/">Partner Organizations</a></p>
+      <p class="quick-link"><a href="http://minaslist.org/what/workshops/">Workshops</a></p>
+      <p class="quick-link"><a href="/about">About</a></p>
     </div>
-
-    {{#if currentUser}}
-      {{> dashboard}}
-    {{/if}}
-
-    <div class="footer-links">
-      <div class="footer-block" id="quick">QUICK LINKS
-        <p class="quick-link"><a href="http://minaslist.org/library/">Library</a></p>
-        <p class="quick-link"><a href="http://minaslist.org/partner-orgs/">Partner Organizations</a></p>
-        <p class="quick-link"><a href="http://minaslist.org/what/workshops/">Workshops</a></p>
-        <p class="quick-link"><a href="/about">About</a></p>
-      </div>
-      <div class="footer-block" id="social">GET SOCIAL
-        <p id="social-icon-para"><a href="http://www.facebook.com/minaslistorg"><img class="social-icon" id="facebook-icon" src="images/facebook-icon.png" alt="facebook icon"></a>
-        <a href="https://twitter.com/minaslist"><img class="social-icon" id="twitter-icon" src="images/twitter-icon.png" alt="twitter icon"></a>
-        <a href="https://www.youtube.com/minaslistorgwomeninpolitics"><img class="social-icon" id="youtube-icon" src="images/youtube-icon.png" alt="youtube icon"></a></p>
-      </div>
-      <div class="footer-block" id="contact">CONTACT US
-        <p class="address-info">Mina's List</p>
-        <p class="address-info">PO Box 390185</p>
-        <p class="address-info">Cambridge, MA 02139</p>
-        <p class="address-info">Call + 1 (617) 945-2194</p>
-      </div>
+    <div class="footer-block" id="social">GET SOCIAL
+      <p id="social-icon-para"><a href="http://www.facebook.com/minaslistorg"><img class="social-icon" id="facebook-icon" src="images/facebook-icon.png" alt="facebook icon"></a>
+      <a href="https://twitter.com/minaslist"><img class="social-icon" id="twitter-icon" src="images/twitter-icon.png" alt="twitter icon"></a>
+      <a href="https://www.youtube.com/minaslistorgwomeninpolitics"><img class="social-icon" id="youtube-icon" src="images/youtube-icon.png" alt="youtube icon"></a></p>
     </div>
+    <div class="footer-block" id="contact">CONTACT US
+      <p class="address-info">Mina's List</p>
+      <p class="address-info">PO Box 390185</p>
+      <p class="address-info">Cambridge, MA 02139</p>
+      <p class="address-info">Call + 1 (617) 945-2194</p>
+    </div>
+  </div>
 </template>
 
 <template name="dashboard">
