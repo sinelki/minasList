@@ -15,12 +15,13 @@
 		</form>
     	</div>
 	<div class="user-profile">
+	  <p>Candidates enrolled:</p>
+	  <select class="candidates">
           {{#each users}}
-		<li class="data-cell {{selected}}">
-        		Candidate: {{emails.[0].address}}
-    		</li>
-	  {{/each}}
+		<option value="{{iso3}}" data-id={{_id}}>{{emails.[0].address}}</option>
 
+	  {{/each}}
+	  </select>
       	</div>
 	<span class="stretch"></span>
      </div>

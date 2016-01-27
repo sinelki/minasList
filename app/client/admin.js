@@ -18,8 +18,8 @@ if (Meteor.isClient) {
 	},
   });
 
-    Template.adminOfProfiles.events ="click .data-cell": (e) ->Session.set("selectedCandidate", @_id)
+    //Template.adminOfProfiles.events ="click .data-cell": (e) ->Session.set("selectedCandidate", @_id)
 
-    Template.adminOfProfiles.selected = ->if Session.equals("selectedCandidate", @_id) then "selected" else ""
+    //Template.adminOfProfiles.selected = ->if Session.equals("selectedCandidate", @_id) then "selected" else ""
 
 }
