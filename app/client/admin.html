@@ -1,0 +1,22 @@
+<template name="adminOfProfiles">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans" />
+  {{> nav}}
+    <div class="header1">
+      <h1 id="userName">ADMIN'S NAME GOES HERE</h1>
+    </div>
+      <div class="review">
+        <p id="review-Info">I guess there would be a pulldown of each candidate</p>
+
+      </div>
+
+    <div class="add">
+	<form id="addUser">
+		Create accounts for candidates to set up their profiles.<br>
+		Name: <input type="text" id="name" placeholder="Name of candidate"><br>
+		Username: <input type="text" id="username"><br>
+		Password: <input type="text" id="password"><br>
+		<input type="submit" value="Add Profile">
+	</form>
+    </div>
+
+</template>

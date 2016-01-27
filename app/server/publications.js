@@ -44,6 +44,9 @@ Profiles.schema = new SimpleSchema({
 
 Profiles.attachSchema(Profiles.schema);
 
+
+Profiles.attachSchema(Profiles.schema);
+
 var profile = Profiles.findOne({name: 'Shinkai Karokhail'});
 
 if(!profile){

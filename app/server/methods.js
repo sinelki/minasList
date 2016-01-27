@@ -29,5 +29,13 @@ Meteor.methods({
       Profiles.insert(profile);
     }
 	console.log(Profiles.findOne({name:profile.name}));
+  },
+  addUser: function(u) {
+    Accounts.createUser({
+    	user: u.user,
+    	email: u.email,
+    	password: u.password
+  });
+	console.log(Accounts);
   }
 });
