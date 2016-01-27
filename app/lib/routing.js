@@ -10,7 +10,7 @@ Router.route('/', {
 
 Router.route('/admin',{
   action: function (){
-    if (Meteor.userId()===Meteor.users.findOne({username:'admin'})._id){
+    if (Meteor.user().username==='admin'){
       this.render('adminOfProfiles');
     } else{
       Router.go('/login');
@@ -75,13 +75,25 @@ Router.route('/editProfile/:_id',{
 });
 
 Router.route('/login',{
+  waitOn: function(){
+    if(Meteor.userId()){
+      console.log('login',Meteor.user());
+      if (Meteor.user().username==='admin'){
+        Router.go('/admin');
+      }
+      else{
+        Router.go('/profile/'+Meteor.userId());
+      }
+    }
+  },
   action: function(){
-    if (Meteor.userId()===Meteor.users.findOne({username:'admin'})._id){
-      Router.go('/admin');
-    }
-    else if(Meteor.userId()){
-      Router.go('/profile/'+Meteor.userId());
-    }
     this.render('login');
   }
 });
+
+Router.route('/logout',{
+  waitOn: function(){
+    Meteor.logout(function(){Router.go('/login');});
+    console.log('logout');
+  }
+})
