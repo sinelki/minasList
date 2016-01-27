@@ -9,6 +9,9 @@ Router.route('/', {
 });
 
 Router.route('/admin',{
+  waitOn: function(){
+    Meteor.subscribe('allUsers'); 
+  },
   action: function(){
     this.render('adminOfProfiles')
   }
