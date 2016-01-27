@@ -46,9 +46,6 @@ Profiles.schema = new SimpleSchema({
 
 Profiles.attachSchema(Profiles.schema);
 
-
-Profiles.attachSchema(Profiles.schema);
-
 var profile = Profiles.findOne({name: 'Shinkai Karokhail'});
 
 if(!profile){
@@ -67,3 +64,9 @@ Meteor.publish('Profiles', function(query) {
 Meteor.publish('Profile', function(id){
   return Profiles.find({owner:id});
 })
+
+Meteor.publish("allUsers", function () {
+  return Meteor.users.find();
+  });
+
+//

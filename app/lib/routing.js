@@ -9,12 +9,16 @@ Router.route('/', {
 });
 
 Router.route('/admin',{
+  waitOn: function(){
+    Meteor.subscribe('allUsers'); 
+  },
   action: function (){
     if (Meteor.user().username==='admin'){
       this.render('adminOfProfiles');
     } else{
       Router.go('/login');
     }
+
   }
 });
 
