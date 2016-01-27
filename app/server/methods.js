@@ -32,10 +32,10 @@ Meteor.methods({
   },
   addUser: function(u) {
     Accounts.createUser({
-    	user: u.user,
     	email: u.email,
     	password: u.password
   });
-	console.log(Accounts);
+	console.log("print accounts");
+	console.log(Meteor.users.findOne({username:u.user}));
   }
 });

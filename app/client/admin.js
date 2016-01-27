@@ -11,4 +11,11 @@ if (Meteor.isClient) {
 	
   });
 
+Template.adminOfProfiles.helpers({
+users: function(){
+var user = Meteor.users.find(); 
+return user; 
+},
+});
+
 }
