@@ -29,7 +29,9 @@ if( userId === undefined){
   });
 }
 
-var userId=Meteor.users.findOne({username: 'user'});
+var userId=Meteor.users.findOne({"emails.address": 'user@gmail.com'})._id;
+
+console.log
 
 Profiles.schema = new SimpleSchema({
   name: {type: String},
@@ -47,7 +49,7 @@ Profiles.attachSchema(Profiles.schema);
 var profile = Profiles.findOne({name: 'Shinkai Karokhail'});
 
 if(!profile){
-  Profiles.insert({name: 'Shinkai Karokhail', date: new Date('December 17, 2015 03:24:00'), country: 'Afghanistan', city: 'Kabul', description:'I am a parliament member', posts:[], owner: userId.username, buttonID: '1234'});
+  Profiles.insert({name: 'Shinkai Karokhail', date: new Date('December 17, 2015 03:24:00'), country: 'Afghanistan', city: 'Kabul', description:'I am a parliament member', posts:[], owner: userId, buttonID: '1234'});
   profile = Profiles.findOne({name: 'Shinkai Karokhail'});
 }
 
