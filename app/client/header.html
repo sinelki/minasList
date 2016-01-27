@@ -12,8 +12,13 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/profiles">Profiles</a></li>
-          <li><a href="/login">Candidate Login</a></li>
           <li><a href="/about">About</a></li>
+          {{#if currentUser}}
+            <li><a href="/login">Editor</a></li>
+            <li><a href="/logout">Sign Out</a></li>
+          {{else}}
+            <li><a href="/login">Candidate Login</a></li>
+          {{/if}}
         </ul>
       </nav>
     </div>

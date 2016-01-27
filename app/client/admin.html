@@ -1,7 +1,7 @@
 <template name="adminOfProfiles">
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans" />
   {{> header}}
-    <div>    
+    <div>
 	<h2 id="profile_name">ADMIN'S NAME GOES HERE</h2>
     </div>
     <div class="profile-list">
@@ -15,10 +15,13 @@
 		</form>
     	</div>
 	<div class="user-profile">
+	  <p>Candidates enrolled:</p>
+	  <select class="candidates">
           {{#each users}}
-		<p>Candidate: {{emails.[0].address}}</p>
-	  {{/each}}
+		<option value="{{iso3}}" data-id={{_id}}>{{emails.[0].address}}</option>
 
+	  {{/each}}
+	  </select>
       	</div>
 	<span class="stretch"></span>
      </div>
