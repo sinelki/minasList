@@ -6,7 +6,7 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.register.events({
+  /*Template.register.events({
     'submit form': function(event) {
       event.preventDefault();
       var emailVar = event.target.registerEmail.value;
@@ -25,7 +25,7 @@ if (Meteor.isClient) {
       var passwordVar = event.target.loginPassword.value;
       Meteor.loginWithPassword(emailVar, passwordVar);
     }
-  });
+  });*/
 }
 
 if (Meteor.isServer) {

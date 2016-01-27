@@ -31,24 +31,20 @@
       <button id="filter-by">
         Filter Profiles
       </button>
-    </div>
-  </div>
-  <div id="filter-profile-block" style="display: none">
-    <div class="filter-pick" id="dropdown">
-      <button class="dropbtn">Select Filter</button>
-      <select id="dropdown-content">
-        <option value="default">Please select a field</option>
+  <!--</div>
+  <div id="filter-profile-block" style="display: none">-->
+    <form>Name:
+      <select id="dropdown-content" class="filter-pick" name="">
+        <option value="default" selected="selected">Please select a field</option>
         <option value="country">Country</option>
         <option value="name">Name</option>
         <option value="color">Color</option>
       </select>
-    </div>
-    <form class="filter-pick">Name:
-      <input type="text" id="choice" name="Choice" placeholder="Search Mina's List">
-      <input type="submit" onclick="" value="Go">
+      <input type="text" class="filter-pick" id="choice" name="choice" placeholder="Search Mina's List">
+      <button id="submit" class="filter-pick">Go</button>
     </form>
+    </div>
   </div>
-  {{filter}}
 </template>
 
 <template name="profileList">

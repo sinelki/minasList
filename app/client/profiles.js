@@ -12,7 +12,7 @@ Template.hello.events({
     }
   });
 
-Template.profileHeaders.events({
+/*Template.profileHeaders.events({
 	'click #filter-by': function() {
 		var filterForm = document.getElementById("filter-profile-block");
 		if (filterForm.style.display == "none") {
@@ -22,13 +22,12 @@ Template.profileHeaders.events({
 			filterForm.style.display = "none";
 		}
 	}
-});
+});*/
 
-Template.profilesHeaders.helpers({
-	filter: function() {
-		// this helper returns a cursor of all of the profiles 
-		// in the collection
+Template.profileHeaders.helpers({
+	'click #submit': function() {
 		var drop = document.getElementById("dropdown-content");
+		console.log(drop);
 		var key = drop.options[drop.selectedIndex].value;
 		var textbox = document.getElementById("choice");
 		var value = textbox.value;
