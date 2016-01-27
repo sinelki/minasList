@@ -49,8 +49,6 @@ h1 {
 	width: 100%;
 	margin-top: 0px;
 	padding-top: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
 	border-width: 1px;
 	border-color: #EDEDED;
 	border-style: solid;
@@ -63,10 +61,13 @@ h2 {
 	font-variant: normal;
 	font-weight: 500;
 	font-size: 22pt;
+	margin-left: 15px;
 }
 
 #what-we-do-wrapper p {
 	font-size: 16pt;
+	margin-left: 15px;
+	margin-right: 15px;
 }
 
 #library-work-wrapper {
@@ -83,8 +84,8 @@ h2 {
 	height: 450px;
 	width: 450px;
 	vertical-align: top;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
 	font-size: 16pt;
 	margin-bottom: 5px;
 	background-color: #FFFFFF;
@@ -106,11 +107,9 @@ h3 {
 #mentor-wrapper {
 	background-color: #FDFDFD;
 	margin-top: 5px;
-	margin-left: 5px;
-	margin-right: 5px;
 	padding-top: 0px;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
 	border-width: 1px;
 	border-color: #EDEDED;
 	border-style: solid;
@@ -192,8 +191,64 @@ h3 {
 	float: right;
 }
 
+#why-wrapper {
+	width: 100%;
+	font-size: 16pt;
+}
+
+#why-wrapper p {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+#stats-wrapper {
+	background-color: #FDFDFD;
+	margin-top: 5px;
+	padding-top: 0px;
+	border-width: 1px;
+	border-color: #EDEDED;
+	border-style: solid;
+	font-size: 14pt;
+	width: 100%;
+}
+
+.bullet-stats {
+	display: inline-block;
+	width: 450px;
+	vertical-align: top;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
 #topic-list, .stats-list {
 	list-style-type: square;
+}
+
+.stats-list li {
+	margin-bottom: 15px;
+}
+
+.stats-list li a {
+	text-decoration: none;
+	color: #D00F4A;
+}
+
+#stats-wrapper p {
+	margin-left: 15px;
+	margin-right: 15px;
+	font-size: 16pt;
+}
+
+#who-not-wrapper {
+	width: 100%;
+	background-color: #D00F4A;
+	color: #FFFFFF;
+	font-size: 12pt;
+}
+
+#who-not-wrapper p {
+	margin-left: 15px;
+	margin-right: 15px;
 }
 
 .profiles-header {
