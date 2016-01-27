@@ -16,7 +16,9 @@
     	</div>
 	<div class="user-profile">
           {{#each users}}
-		<p>Candidate: {{emails.[0].address}}</p>
+		<li class="data-cell {{selected}}">
+        		Candidate: {{emails.[0].address}}
+    		</li>
 	  {{/each}}
 
       	</div>

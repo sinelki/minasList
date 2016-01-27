@@ -11,11 +11,15 @@ if (Meteor.isClient) {
 	
   });
 
-Template.adminOfProfiles.helpers({
-users: function(){
-var user = Meteor.users.find(); 
-return user; 
-},
-});
+    Template.adminOfProfiles.helpers({
+	users: function(){
+	  var user = Meteor.users.find(); 
+	  return user; 
+	},
+  });
+
+    Template.adminOfProfiles.events ="click .data-cell": (e) ->Session.set("selectedCandidate", @_id)
+
+    Template.adminOfProfiles.selected = ->if Session.equals("selectedCandidate", @_id) then "selected" else ""
 
 }
