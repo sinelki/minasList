@@ -2,7 +2,7 @@
 	<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Josefin+Sans' />
 	{{> nav}}
   {{>profileHeaders}}
-  <div class="profile-list">
+  <!--<div class="profile-list">
   	<div class="user-profile">
   		<h3 class="user-name">Profile 1</h3>
   	</div>
@@ -10,7 +10,7 @@
   		<h3 class="user-name">Profile 2</h3>
   	</div>
   	<span class="stretch"></span>
-  </div>
+  </div>-->
 
   {{> footer}}
 </template>
@@ -36,7 +36,7 @@
   <div id="filter-profile-block" style="display: none">
     <div class="filter-pick" id="dropdown">
       <button class="dropbtn">Select Filter</button>
-      <select class="dropdown-content">
+      <select id="dropdown-content">
         <option value="default">Please select a field</option>
         <option value="country">Country</option>
         <option value="name">Name</option>
@@ -45,7 +45,16 @@
     </div>
     <form class="filter-pick">Name:
       <input type="text" id="choice" name="Choice" placeholder="Search Mina's List">
-      <input type="submit" value="Go">
+      <input type="submit" onclick="" value="Go">
     </form>
   </div>
+  {{filter}}
+</template>
+
+<template name="profileList">
+  {{#each profiles}}
+    <h1>{{name}}</h1>
+    <p>{{country}}</p>
+    <p>{{posts}}</p>
+  {{/each}}
 </template>
