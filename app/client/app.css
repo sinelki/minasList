@@ -527,16 +527,54 @@ h1 {
 	padding-top: 10px;
 }
 
-#editInfo {
-display: input {
-	display: block;
-}
-}
-
 #enterInfo {
 	text-align: center;
 }
 
-.form-signin{
+.wrapper {
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+.form-signin {
+	max-width: 380px;
+	padding: 15px 35px 45px;
+	margin: 0 auto;
+	background-color: #fff;
+	border: 1px solid rgba(0,0,0,0.1);
+}
+
+input[type="email"] {
+	margin-bottom: -1px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+input[type="password"] {
+	margin-bottom: 20px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.login-wrapper{
 	margin-top: 50px;
+}
+
+.login-inner-wrapper{
+	width:300px;
+	margin: 0 auto;
+}
+
+#inputPassword, #inputEmail, #loginButton{
+	width:300px;
+	margin-bottom: 15px;
+	height: 30px;
+	font-size: 20px;
+	border-radius: 5px;
+	border-color: rgba(0,0,0,0.1);
+	display:block;
+}
+
+.login-wrapper{
+	font-family: 'Josefin Sans';
 }
