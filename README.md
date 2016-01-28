@@ -25,7 +25,7 @@ An admin account creates accounts for the political candidates with an email add
 
 The *app* folder contains everything the app needs.   
 The *client* folder contains the html, js, and css files for each page.   
-The *lib* folder contains the routing logic.  
+The *lib* folder contains the routing logic.
 The *server* folder contains the methods and publication files, which direct the backend logic.  
 The *public* folder contains images used in the app.
 
