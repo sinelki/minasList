@@ -1,11 +1,11 @@
 Template.setPassword.events({
-  'keypress Input': function(){
-    var password1 = template.find('password1').value;
-    var password2 = template.find('password2').value;
+  'keyup Input': function(event,template){
+    var password1 = template.find('[name=password1]').value;
+    var password2 = template.find('[name=password2]').value;
     if (password1===password2){
       Session.set('passwordError',null);
     } else{
-      Session.set('passwords are not equal',null);
+      Session.set('passwordError','passwords are not equal');
     }
   },
   'submit form': function(event){
@@ -14,21 +14,12 @@ Template.setPassword.events({
       var password1 = event.target.password1.value;
       var password2 = event.target.password1.value;
       if(password1===password2){
-        Meteor.call('trySetPassword',password1);
+        Meteor.call('trySetPassword',this.token,password1);
         Router.go('/login');
       }
   }
 });
 
 Template.setPassword.helpers({
-  pError: function(){
-    var password1 = document.getElementByName('password1').value;
-    var password2 = document.getElementByName('password2').value;
-    if (password1!==password2){
-      return 'passwords are not equal';
-    } else{
-      return 'peasasas';
-    }
-  },
-  dog: 'cow'
+  passwordError: function(){return Session.get('passwordError');}
 })

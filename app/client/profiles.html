@@ -2,18 +2,27 @@
 	<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Josefin+Sans' />
 	{{> header}}
 
-  {{>profileHeaders}}
+  {{> profileHeaders}}
 
-  <ul>
-    {{#each profile}}
-      <li>
-        <p>{{name}}</p>
-        <p>{{country}}</p>
-        <p>{{description}}</p>
-        <p>{{posts}}</p>
-      </li>
-    {{/each}}
-  </ul>
+  <div class="all-profiles-wrapper">
+    <ul>
+      {{#each profile}}
+        <li>  
+          <div id="profile-wrapper">
+            <div class="profile-section" id="profile-bio-pane">
+              <h3 id="profile-name">{{name}}</h3>
+              <h4 id="profile-country">{{country}}</h4>
+              <p id="profile-desc">{{description}}</p>
+            </div>
+            <div class="profile-section" id="profile-posts-pane">
+              <p id="all-profile-posts">{{posts}}</p>
+              Wheee
+            </div>
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
 
   {{> footer}}
 </template>

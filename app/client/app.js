@@ -12,7 +12,7 @@ if (Meteor.isClient) {
       var emailVar = event.target.registerEmail.value;
       var passwordVar = event.target.registerPassword.value;
       Accounts.createUser({
-        email: emailVar, 
+        email: emailVar,
         password: passwordVar
       });
     }
@@ -33,3 +33,9 @@ if (Meteor.isServer) {
     // code to run on server at startup
   });
 }
+
+Template.Home.helpers({
+  resetPasswordToken: function() {
+    return Session.get('resetPasswordToken');
+  }
+});

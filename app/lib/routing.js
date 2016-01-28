@@ -107,6 +107,9 @@ Router.route('/resetSent',{
 })
 
 Router.route('/setPassword',{
+  data: function(){
+    return {token: this.params.query.token};
+  },
   action: function(){
     this.render('setPassword');
   }
