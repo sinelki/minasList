@@ -6,7 +6,6 @@ if (Meteor.isClient) {
       var emailVar = event.target.username.value;
       var passwordVar = event.target.password.value;
       Meteor.call("addUser",{user: nameVar, email: emailVar, password: passwordVar});
-	console.log(Accounts.find({}));
      },
     'click .candidate': function(){
         var candidateId = this._id;
@@ -26,12 +25,12 @@ if (Meteor.isClient) {
     })
    }
   });
-	
+
 
     Template.adminOfProfiles.helpers({
 	users: function(){
-	  var user = Meteor.users.find(); 
-	  return user; 
+	  var user = Meteor.users.find();
+	  return user;
 	},
 	'selectedClass': function(){
     	  var candidateId = this._id;
@@ -39,7 +38,7 @@ if (Meteor.isClient) {
           if(candidateId == selectedCandidate){
         	return "selected"
           }
-	} 
+	}
   });
 
     //Template.adminOfProfiles.events ="click .data-cell": (e) ->Session.set("selectedCandidate", @_id)

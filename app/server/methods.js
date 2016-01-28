@@ -6,9 +6,9 @@ Meteor.methods({
     Profiles.remove({owner: Meteor.userId});
   },
   updateProfile: function (profile) {
-    /*if (! Meteor.userId() || (Meteor.userId()!==profile.owner)) {
+    if (! Meteor.userId() || (Meteor.userId()!==profile.owner)) {
       throw new Meteor.Error('not-authorized');
-    }*/
+    }
   console.log('hello');
     if (Profiles.findOne({owner: Meteor.userId()})){
       Profiles.update(
@@ -31,14 +31,12 @@ Meteor.methods({
   console.log(Profiles.findOne({name:profile.name}));
   },
   addUser: function(u) {
-/**    Accounts.createUser({
-      email: u.email,
-      password: u.password
-    });*/
+    if (! Meteor.userId() || Meteor.user().username!=='admin') {
+      throw new Meteor.Error('not-authorized');
+    }
     var userId = Accounts.createUser({email: u.email});
     Accounts.sendEnrollmentEmail(userId);
     console.log('print accounts');
-    //console.log(Meteor.users.findOne({username:u.user}));
   },
   tryResetPassword: function(email){
     Accounts.sendResetPasswordEmail(Meteor.users.findOne({'emails.address':email}));

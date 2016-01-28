@@ -21,18 +21,28 @@ Template.setPassword.events({
     }
   },
   'submit form': function(event){
-      event.preventDefault();
-      console.log(event);
-      var password1 = event.target.password1.value;
-      var password2 = event.target.password1.value;
-      if(password1===password2){
+    event.preventDefault();
+    console.log(event);
+    var password1 = event.target.password1.value;
+    var password2 = event.target.password2.value;
+    if(password1===password2){
+      console.log('a');
+      if(Meteor.userId()){
+        console.log('b');
+        var password0 = event.target.password0.value;
+        console.log(password0);
+        Accounts.changePassword(password0,password1, function(){
+          console.log('changing');
+        });
+      } else{
         Accounts.resetPassword(Session.get('resetPasswordToken'),password1);
         if (doneCallback){
           doneCallback();
         }
         Session.set('resetPasswordToken', '');
-        Router.go('/login');
       }
+      Router.go('/login');
+    }
   }
 });
 
