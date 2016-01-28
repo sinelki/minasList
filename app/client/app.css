@@ -271,42 +271,94 @@ h3 {
 *****************************************/
 
 .profiles-header {
-	height: 110px;
-	background-color: #D3D3D3;
-	border: 1px solid #B8B8B8;
+	height: 70px;
 	margin-top: 15px;
 	margin-left: 5px;
 	margin-right: 5px;
 	padding-left: 10px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
-	background-image: linear-gradient(bottom, #BDBDBD 0%, #D3D3D3 100%);
-	background-image: -o-linear-gradient(bottom, #BDBDBD 0%, #D3D3D3 100%);
-	background-image: -moz-linear-gradient(bottom, #BDBDBD 0%, #D3D3D3 100%);
-	background-image: -webkit-linear-gradient(bottom, #BDBDBD 0%, #D3D3D3 100%);
-	background-image: -ms-linear-gradient(bottom, #BDBDBD 0%, #D3D3D3 100%);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	/*background-color: #345670;*/
+}
 
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(0, #BDBDBD),
-		color-stop(1, #D3D3D3)
-	);
+.profiles-header form {
+	font-family: 'Arial';
+	font-size: 14pt;
+	color: #333333;
+}
+
+#select {
+	font-size: 16pt;
+	position: relative;
+	display: inline-block;
+	margin-left: 30px;
+	margin-right: 30px;
 }
 
 .filter-pick {
 	display: inline-block;
 }
 
-#members-header {
+#dropdown-content {
+	width: 300px;
+	height: 40px;
+	border: 1px solid #CCC;
+	font-size: 14pt;
+	font-family: 'Arial';
+}
+
+#choice {
+	margin-left: 30px;
+	margin-right: 30px;
+	height: 40px;
+	border: 1px solid #CCC;
+	font-size: 14pt;
+	font-family: 'Arial';
+}
+
+#submit {
+	font-size: 14pt;
 	color: #FFFFFF;
-	font-family: 'Tahoma';
+	margin-left: 30px;
+	margin-right: 30px;
+	height: 40px;
+	width: 100px;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	border: 1px solid #B37D00;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	background-color: #D00F4A;
+	background-image: linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+	background-image: -o-linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+	background-image: -moz-linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+	background-image: -webkit-linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+	background-image: -ms-linear-gradient(bottom, #9D0B38 0%, #D00F4A 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #9D0B38),
+		color-stop(1, #D00F4A)
+	);
+}
+
+#members-header {
+	color: #D00F4A;
+	font-family: 'Josefin Sans';
+	font-weight: normal;
 	margin-top: 5px;
-	height: 30px;
+	height: 20px;
 	margin-top: 5px;
+	text-transform: uppercase;
+}
+
+#header-line {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 15px;
+	margin-bottom: 5px;
 }
 
 .all-profiles-wrapper {
