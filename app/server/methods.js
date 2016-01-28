@@ -63,3 +63,4 @@ Meteor.users.allow({
   },
   fetch: []
 });
+
