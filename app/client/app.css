@@ -271,13 +271,12 @@ h3 {
 *****************************************/
 
 .profiles-header {
-	width: 100%;
 	height: 110px;
 	background-color: #D3D3D3;
 	border: 1px solid #B8B8B8;
 	margin-top: 15px;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 5px;
+	margin-right: 5px;
 	padding-left: 10px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -307,15 +306,29 @@ h3 {
 	font-family: 'Tahoma';
 	margin-top: 5px;
 	height: 30px;
+	margin-top: 5px;
 }
 
 .all-profiles-wrapper {
-	background-color: #D3D3D3;
+	height: 1000px;
 	margin-top: 5px;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-bottom: 15px;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	padding-left: 10px;
-	padding-right: 10px;
+}
+
+.all-profiles-wrapper ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#profile-wrapper {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
 	border-style: solid;
 	border-color: #CCCCCC;
 	border-width: 1px;
@@ -338,20 +351,8 @@ h3 {
 	);
 }
 
-.all-profiles-wrapper ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-}
-
-#profile-wrapper {
-	margin-top: 5px;
-	margin-left: 5px;
-	margin-right: 5px;
-	margin-bottom: 5px;
-}
-
 .profile-section {
+	height: 300px;
 	margin-top: 5px;
 	margin-left: 5px;
 	margin-right: 5px;
@@ -373,20 +374,46 @@ h3 {
 }
 
 #profile-posts-pane {
-	width: 642px;
+	width: 640px;
+	font-family: 'Arial';
+	color: #333333;
+}
+
+.line-separator {
+	height: 1px;
+	background: #DDDDDD;
+	border-bottom: 1px solid #BBBBBB;
 }
 
 #profile-name {
 	font-family: 'Arial';
-	text-align: center;
+	text-align: left;
+	color: #D00F4A;
+	padding: 0;
+	margin-bottom: 0;
 }
 
 #profile-country {
 	font-family: 'Arial';
+	text-align: left;
+	color: #333333;
+	font-weight: normal;
+	padding: 0;
+	margin-bottom: 5px;
+	margin-top: 0px;
 }
 
 #profile-desc {
 	font-family: 'Arial';
+	color: #333333;
+	font-style: italic;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+#all-profile-posts {
 }
 
 /*****************************************
