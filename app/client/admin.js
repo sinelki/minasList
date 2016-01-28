@@ -29,12 +29,12 @@ if (Meteor.isClient) {
     })
    }
   });
-	
+
 
     Template.adminOfProfiles.helpers({
 	users: function(){
-	  var user = Meteor.users.find(); 
-	  return user; 
+	  var user = Meteor.users.find();
+	  return user;
 	},
 	'selectedClass': function(){
     	  var candidateId = this._id;
@@ -42,7 +42,7 @@ if (Meteor.isClient) {
           if(candidateId == selectedCandidate){
         	return "selected"
           }
-	} 
+	}
   });
 
     //Template.adminOfProfiles.events ="click .data-cell": (e) ->Session.set("selectedCandidate", @_id)

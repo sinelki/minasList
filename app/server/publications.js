@@ -66,8 +66,11 @@ Meteor.publish('Profile', function(id){
 })
 
 Meteor.publish("allUsers", function () {
+  if (!Meteor.userId() || Meteor.user().username!=='admin') {
+    throw new Meteor.Error('not-authorized');
+  }
   return Meteor.users.find();
-  });
+});
 
 
 Profiles.allow({

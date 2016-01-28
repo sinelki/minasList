@@ -6,6 +6,7 @@ Template.login.events({
         var passwordVar = event.target.loginPassword.value;
         console.log(emailVar,passwordVar);
         Meteor.loginWithPassword(emailVar, passwordVar, function () {
+           console.log(Meteor.user());
             // login is now complete so do what you'd like.
             console.log(Meteor.user());
             if (! Meteor.userId()) {
