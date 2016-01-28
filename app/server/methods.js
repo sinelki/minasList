@@ -38,4 +38,24 @@ Meteor.methods({
 	console.log("print accounts");
 	console.log(Meteor.users.findOne({username:u.user}));
   }
+
+});
+
+
+Meteor.users.allow({
+  remove: function (userId, doc) {
+  //currentUser = Meteor.users.findOne({ _id: userId }
+  //console.log(currentUser);
+    var u = Meteor.users.findOne({_id:userId});
+    return (u && Meteor.user().username==='admin');
+
+    //if (Meteor.user().username==='admin') {
+	//console.log("green light");
+      //return true;
+    //} else {
+      //console.log("red light");
+      //return false;
+    //}
+  },
+  fetch: []
 });

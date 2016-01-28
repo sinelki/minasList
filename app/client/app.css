@@ -796,3 +796,7 @@ input[type="password"] {
 .login-wrapper{
 	font-family: 'Josefin Sans';
 }
+
+.selected{
+    background-color: yellow;
+}
