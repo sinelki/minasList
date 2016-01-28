@@ -164,7 +164,7 @@ h3 {
 		linear,
 		left bottom,
 		left top,
-		color-stop(0, #9D0B38), 
+		color-stop(0, #9D0B38),
 		color-stop(1, #D00F4A)
 	);
 	font-family: 'NotCourierSans';
@@ -482,7 +482,7 @@ h3 {
 		linear,
 		left bottom,
 		left top,
-		color-stop(0, #9D0B38), 
+		color-stop(0, #9D0B38),
 		color-stop(1, #D00F4A)
 	);
 	color: white;
@@ -830,18 +830,6 @@ h3 {
 	border: 1px solid rgba(0,0,0,0.1);
 }
 
-input[type="email"] {
-	margin-bottom: -1px;
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-}
-
-input[type="password"] {
-	margin-bottom: 20px;
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
-}
-
 .login-wrapper{
 	margin-top: 50px;
 }
@@ -853,7 +841,6 @@ input[type="password"] {
 
 #inputPassword, #inputEmail, #loginButton{
 	width:300px;
-	margin-bottom: 15px;
 	height: 30px;
 	font-size: 20px;
 	border-radius: 5px;
@@ -861,6 +848,26 @@ input[type="password"] {
 	display:block;
 }
 
+#inputEmail, #loginButton{
+  margin-bottom: 15px;
+}
+
+#forgotPasswordLink{
+  text-align: right;
+  width:300px;
+  margin: 0 auto;
+  line-height: 0;
+}
+
+#forgotPasswordLink a{
+  text-decoration: none;
+  color: black;
+}
+
 .login-wrapper{
 	font-family: 'Josefin Sans';
+}
+
+.selected{
+    background-color: yellow;
 }

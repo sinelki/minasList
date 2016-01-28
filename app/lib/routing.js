@@ -10,7 +10,7 @@ Router.route('/', {
 
 Router.route('/admin',{
   waitOn: function(){
-    Meteor.subscribe('allUsers'); 
+    Meteor.subscribe('allUsers');
   },
   action: function (){
     if (Meteor.user().username==='admin'){
@@ -56,6 +56,19 @@ Router.route('/editProfile/:_id',{
   }
 });
 
+Router.route('/profile/:_id', {
+  waitOn: function(){
+    console.log(this.params._id);
+    return Meteor.subscribe('Profile', this.params._id)
+  },
+  data: function(){
+    return Profiles.findOne({_id: this.params._id})
+  },
+  action: function (){
+    this.render('Profile')
+  }
+});
+
 Router.route('/login',{
   waitOn: function(){
     if(Meteor.userId()){
@@ -64,7 +77,7 @@ Router.route('/login',{
         Router.go('/admin');
       }
       else{
-        Router.go('/profile/'+Meteor.userId());
+        Router.go('/editProfile/'+Meteor.userId());
       }
     }
   },
@@ -77,5 +90,26 @@ Router.route('/logout',{
   waitOn: function(){
     Meteor.logout(function(){Router.go('/login');});
     console.log('logout');
+  }
+})
+
+Router.route('/resetPassword',{
+  action: function(){
+    this.render('resetPassword');
+  }
+})
+
+Router.route('/resetSent',{
+  action: function(){
+    this.render('resetSent');
+  }
+})
+
+Router.route('/setPassword',{
+  data: function(){
+    return {token: this.params.query.token};
+  },
+  action: function(){
+    this.render('setPassword');
   }
 })
