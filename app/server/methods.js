@@ -31,20 +31,18 @@ Meteor.methods({
   console.log(Profiles.findOne({name:profile.name}));
   },
   addUser: function(u) {
-    Accounts.createUser({
+/**    Accounts.createUser({
       email: u.email,
       password: u.password
-    });
+    });*/
+    var userId = Accounts.createUser({email: u.email});
+    Accounts.sendEnrollmentEmail(userId);
     console.log('print accounts');
-    console.log(Meteor.users.findOne({username:u.user}));
+    //console.log(Meteor.users.findOne({username:u.user}));
   },
   tryResetPassword: function(email){
     Accounts.sendResetPasswordEmail(Meteor.users.findOne({'emails.address':email}));
-  },
-  trySetPassword: function(token,newPassword){
-    Accounts.resetPassword(token, newPassword);
   }
-
 });
 
 
