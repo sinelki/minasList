@@ -59,10 +59,11 @@ Router.route('/editProfile/:_id',{
 Router.route('/profile/:_id', {
   waitOn: function(){
     console.log(this.params._id);
-    return Meteor.subscribe('Profile', this.params._id)
+    Meteor.subscribe('Profile', this.params._id);
   },
   data: function(){
-    return Profiles.findOne({_id: this.params._id})
+    console.log(Profiles.findOne({owner: this.params._id}));
+    return Profiles.findOne({owner: this.params._id});
   },
   action: function (){
     this.render('Profile')
