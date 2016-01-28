@@ -11,6 +11,7 @@ Router.route('/', {
 Router.route('/admin',{
   waitOn: function(){
     Meteor.subscribe('allUsers');
+    Meteor.subscribe('Profiles', {});
   },
   action: function (){
     if (Meteor.user().username==='admin'){

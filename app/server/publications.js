@@ -69,4 +69,7 @@ Meteor.publish("allUsers", function () {
   return Meteor.users.find();
   });
 
-//
+
+Profiles.allow({
+    remove: function () { return true; },
+});

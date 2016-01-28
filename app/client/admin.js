@@ -6,7 +6,6 @@ if (Meteor.isClient) {
       var emailVar = event.target.username.value;
       var passwordVar = event.target.password.value;
       Meteor.call("addUser",{user: nameVar, email: emailVar, password: passwordVar});
-	console.log(Accounts.find({}));
      },
     'click .candidate': function(){
         var candidateId = this._id;
@@ -16,6 +15,10 @@ if (Meteor.isClient) {
     'click .remove': function (event) {
       var selectedCandidate = Session.get('selectedCandidate');
 	console.log(selectedCandidate);
+      var profileId = Profiles.findOne({owner:selectedCandidate});
+	console.log(profileId);
+      Profiles.remove(profileId);
+	console.log(Profiles.find({}));
       Accounts.users.remove({ _id: selectedCandidate}, function (error, result) {
     if (error) {
       console.log("Error removing user: ", error);
