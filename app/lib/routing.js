@@ -10,7 +10,7 @@ Router.route('/', {
 
 Router.route('/admin',{
   waitOn: function(){
-    Meteor.subscribe('allUsers'); 
+    Meteor.subscribe('allUsers');
   },
   action: function (){
     if (Meteor.user().username==='admin'){
@@ -51,7 +51,7 @@ Router.route('/profiles', {
     var result = Profiles.find({}).fetch();
     console.log(result);
     return result;
-  }, 
+  },
   action: function() {
     this.render('Profiles');
   }
@@ -90,7 +90,7 @@ Router.route('/login',{
         Router.go('/admin');
       }
       else{
-        Router.go('/profile/'+Meteor.userId());
+        Router.go('/editProfile/'+Meteor.userId());
       }
     }
   },
@@ -103,5 +103,23 @@ Router.route('/logout',{
   waitOn: function(){
     Meteor.logout(function(){Router.go('/login');});
     console.log('logout');
+  }
+})
+
+Router.route('/resetPassword',{
+  action: function(){
+    this.render('resetPassword');
+  }
+})
+
+Router.route('/resetSent',{
+  action: function(){
+    this.render('resetSent');
+  }
+})
+
+Router.route('/setPassword',{
+  action: function(){
+    this.render('setPassword');
   }
 })
