@@ -4,8 +4,17 @@
 
   {{>profileHeaders}}
 
-  {{name}}
-  
+  <ul>
+    {{#each profile}}
+      <li>
+        <p>{{name}}</p>
+        <p>{{country}}</p>
+        <p>{{description}}</p>
+        <p>{{posts}}</p>
+      </li>
+    {{/each}}
+  </ul>
+
   {{> footer}}
 </template>
 
@@ -22,12 +31,4 @@
       <button id="submit" class="filter-pick">Go</button>
     </form>
   </div>
-</template>
-
-<template name="profileList">
-  {{#each profiles}}
-    <h1>{{name}}</h1>
-    <p>{{country}}</p>
-    <p>{{posts}}</p>
-  {{/each}}
 </template>

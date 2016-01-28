@@ -1,45 +1,22 @@
 Meteor.subscribe('Profiles');
 
-/*Template.hello.events({
-    'click .clickable': function() {
-      var changeDiv = document.getElementById("make-visible");
-      if (changeDiv.style.display == "none") {
-        changeDiv.style.display = "block";
-      }
-      else {
-        changeDiv.style.display = "none";
-      }
-    }
-  });
-
-Template.profileHeaders.events({
-	'click #filter-by': function() {
-		var filterForm = document.getElementById("filter-profile-block");
-		if (filterForm.style.display == "none") {
-			filterForm.style.display = "block";
+Template.Profiles.helpers({
+	'profile': function() {
+		var paramQuery = Router.current().params.query.dropdown;
+		var paramText = Router.current().params.query.choice;
+		if (paramQuery === "country") {
+			//console.log("by country");
+			var result =  Profiles.find({country: {$regex: paramText, $options: "i"}}).fetch();
+		}
+		else if (paramQuery === "name") {
+			//console.log("by name");
+			var result = Profiles.find({name: {$regex: paramText, $options: "i"}}).fetch();
 		}
 		else {
-			filterForm.style.display = "none";
+			//console.log("all");
+			var result = Profiles.find({}).fetch();
 		}
+		//console.log(result);
+		return result;
 	}
 });
-
-Template.profileHeaders.helpers({
-	'click #submit': function() {
-		var drop = document.getElementById("dropdown-content");
-		console.log(drop);
-		var key = drop.options[drop.selectedIndex].value;
-		var textbox = document.getElementById("choice");
-		var val = textbox.value;
-		if (key == "country") {
-			Router.go('/profiles');
-			this.render('Profiles');
-		}
-		console.log("You have selected " + key);
-	}
-});
-
-Template.Profiles.rendered = function() {
-	console.log("data");
-	console.log(Template.instance().data);
-}*/
