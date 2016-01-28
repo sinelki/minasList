@@ -169,8 +169,6 @@ h3 {
 	);
 	font-family: 'NotCourierSans';
   	font-size:30px;
-  	/*font-family: 'Arial';
-	font-size: 16pt;*/
 }
 
 #what-do-buttons a button:hover {
@@ -279,7 +277,6 @@ h3 {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-right: 10px;
-	/*background-color: #345670;*/
 }
 
 .profiles-header form {
@@ -552,8 +549,6 @@ h3 {
 
 .lower {
 	background-color: #D00F4A;
-	/*border: none;
-	border-radius: 2px;*/
 	border: 1px solid #B37D00;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -608,7 +603,6 @@ h3 {
 	height: 100%;
 	top: 0;
 	left: 0;
-	/*background: rgba(0,0,0,0.9);*/
 	background-color: #D00F4A;
 	word-spacing: 2px;
 }
