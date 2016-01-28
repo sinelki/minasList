@@ -16,12 +16,16 @@
     	</div>
 	<div class="user-profile">
 	  <p>Candidates enrolled:</p>
-	  <select class="candidates">
+	  <tbody class="candidates">
           {{#each users}}
-		<option value="{{iso3}}" data-id={{_id}}>{{emails.[0].address}}</option>
-
+		<tr class="candidate {{selectedClass}}">
+    			<td class="name">{{emails.[0].address}}</td>
+  		</tr>
 	  {{/each}}
-	  </select>
+		<tr class="removeButton">
+		    	<td><input type="button" class="remove" value="Delete Candidate Profile"></td>
+		</tr>
+	  </tbody>
       	</div>
 	<span class="stretch"></span>
      </div>

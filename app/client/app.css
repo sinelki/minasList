@@ -792,3 +792,7 @@ h3 {
 .login-wrapper{
 	font-family: 'Josefin Sans';
 }
+
+.selected{
+    background-color: yellow;
+}

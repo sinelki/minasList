@@ -44,4 +44,24 @@ Meteor.methods({
   trySetPassword: function(token,newPassword){
     Accounts.resetPassword(token, newPassword);
   }
+
+});
+
+
+Meteor.users.allow({
+  remove: function (userId, doc) {
+  //currentUser = Meteor.users.findOne({ _id: userId }
+  //console.log(currentUser);
+    var u = Meteor.users.findOne({_id:userId});
+    return (u && Meteor.user().username==='admin');
+
+    //if (Meteor.user().username==='admin') {
+	//console.log("green light");
+      //return true;
+    //} else {
+      //console.log("red light");
+      //return false;
+    //}
+  },
+  fetch: []
 });
