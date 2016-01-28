@@ -18,40 +18,14 @@ Router.route('/admin',{
     } else{
       Router.go('/login');
     }
-
   }
 });
 
 Router.route('/profiles', {
+  template: "Profiles",
   waitOn: function() {
     Meteor.subscribe('Profiles', {});
   },
-  data: function() {
-    if (this.params.query.dropdown === "country") {
-      console.log("by country");
-      //var result = Profiles.find({_id: "KRkWsF5t6uoRjWq7g"}).fetch();
-      var text = this.params.query.choice;
-
-      // i makes the user's text case-insensitive
-      var result = Profiles.find({country: {$regex: text, $options: "i"}}).fetch();
-      console.log(result);
-      //return {aaa: "monkey"};
-      return result;
-    }
-    else if (this.params.query.dropdown === "name") {
-      console.log("by name");
-      var text = this.params.query.choice;
-      var result = Profiles.find({name: {$regex: text, $options: "i"}}).fetch();
-      console.log(result);
-      return result;
-      //return {aaa: "monkey"};
-    }
-    //return Profiles.findOne({_id: "KRkWsF5t6uoRjWq7g"});
-    console.log("all");
-    var result = Profiles.find({}).fetch();
-    console.log(result);
-    return result;
-  }, 
   action: function() {
     this.render('Profiles');
   }
