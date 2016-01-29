@@ -1,4 +1,5 @@
 <template name="EditProfiles">
+<!-- This template is for the candidates. Here they can enter information about their campaign. They also need to go through PayPal to find their button id.-->
   {{> header}}
 
   <div class="panel">
@@ -6,7 +7,7 @@
 
       <p id="enterInfo">
         <p id="enter-Info">COMPLETE YOUR PROFILE</p>
-	{{> addPicForm}}
+	{{> addPicForm}} 
 	{{> editInfoForm}}
       </p>
   </div>
@@ -15,7 +16,7 @@
 
 <template name="addPicForm">
    <form id="addPic">
-
+   <!--placeholder template. We do not currently support image uploads-->
    </form>
 </template>
 
@@ -30,7 +31,7 @@
 	To find your Button ID,<br>
 	<ul style="list-style-type:circle">
   		<li>Login to your <a href="https://www.paypal.com/signin/">PayPal Account</a></li>
-  		<li>Other steps</li>
+  		<li>Other steps</li> <!--Figure out steps candidates need to take on PayPal website to find button id-->
   		<li>Copy the Button ID and paste it here</li>
 	</ul>
 

@@ -1,21 +1,24 @@
 if (Meteor.isClient) {
+    // Creates new user upon submission of form
     Template.adminOfProfiles.events({
     'submit form': function(event){
       event.preventDefault();
       var emailVar = event.target.username.value;
       Meteor.call("addUser",{email: emailVar});
      },
+    // Sets selectedCandidate when an email is clicked
     'click .candidate': function(){
         var candidateId = this._id;
         Session.set('selectedCandidate', candidateId);
 	console.log(candidateId);
     },
+    // Removes user when remove button is clicked. Should also remove their profile (this does not work correctly)
     'click .remove': function (event) {
       var selectedCandidate = Session.get('selectedCandidate');
 	console.log(selectedCandidate);
       var profileId = Profiles.findOne({owner:selectedCandidate});
 	console.log(profileId);
-      Profiles.remove(profileId);
+      Profiles.remove(profileId);//Does NOT actually remove their profile from the database
 	console.log(Profiles.find({}));
       Accounts.users.remove({ _id: selectedCandidate}, function (error, result) {
     if (error) {
@@ -23,12 +26,11 @@ if (Meteor.isClient) {
     } else {
       console.log("Number of users removed: " + result);
      }
-      //Accounts.update();
     })
    }
   });
 
-
+    // Allows for loop in template to display all the users in the Accounts database
     Template.adminOfProfiles.helpers({
 	users: function(){
 	console.log(Meteor.userId);
@@ -45,9 +47,5 @@ if (Meteor.isClient) {
           }
 	}
   });
-
-    //Template.adminOfProfiles.events ="click .data-cell": (e) ->Session.set("selectedCandidate", @_id)
-
-    //Template.adminOfProfiles.selected = ->if Session.equals("selectedCandidate", @_id) then "selected" else ""
 
 }

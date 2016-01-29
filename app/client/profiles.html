@@ -1,4 +1,5 @@
 <template name="Profiles">
+<!-- This template is for the general user. Here they can see all the profiles that have been created.-->
 	<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Josefin+Sans' />
 	{{> header}}
 
@@ -21,20 +22,6 @@
           </div>
         </li>
       {{/each}}
-      <!--<li>  
-          <div id="profile-wrapper">
-            <div class="profile-section" id="profile-bio-pane">
-              <h3 id="profile-name">{{name}}</h3>
-              <h4 id="profile-country">{{country}}</h4>
-              <div class="line-separator"></div>
-              <p id="profile-desc">{{description}}</p>
-            </div>
-            <div class="profile-section" id="profile-posts-pane">
-              <p id="all-profile-posts">{{posts}}</p>
-              Wheee
-            </div>
-          </div>
-        </li>-->
     </ul>
   </div>
 
@@ -42,6 +29,7 @@
 </template>
 
 <template name="profileHeaders">
+<!-- This template is allows for filtering of the candidates by country and name-->
   <div class="line-separator" id="header-line"></div>
   <div class="profiles-header">
     <h1 id="members-header">Our Members</h1>
