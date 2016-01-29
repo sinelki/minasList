@@ -26,7 +26,7 @@ if (Meteor.isClient) {
     } else {
       console.log("Number of users removed: " + result);
      }
-      //Accounts.update();
+
     })
    }
   });
@@ -50,9 +50,5 @@ if (Meteor.isClient) {
           }
 	}
   });
-
-    //Template.adminOfProfiles.events ="click .data-cell": (e) ->Session.set("selectedCandidate", @_id)
-
-    //Template.adminOfProfiles.selected = ->if Session.equals("selectedCandidate", @_id) then "selected" else ""
 
 }
