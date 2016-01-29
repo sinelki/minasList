@@ -1,13 +1,18 @@
 if (Meteor.isClient) {
+  // set up Profiles database
   Profiles = new Mongo.Collection('Profiles')
 }
 
+// render the Home template when we're at the home page
 Router.route('/', {
   action: function(){
     this.render('Home')
   }
 });
 
+// subscribe all users/profiles before doing anything else
+// if the user logged in is the admin, go to the admin page
+  // otherwise go to the login page
 Router.route('/admin',{
   waitOn: function(){
     Meteor.subscribe('allUsers');
@@ -22,6 +27,7 @@ Router.route('/admin',{
   }
 });
 
+// subscribe the Profiles database and then load the Profiles template
 Router.route('/profiles', {
   template: "Profiles",
   waitOn: function() {
@@ -32,13 +38,17 @@ Router.route('/profiles', {
   }
 });
 
+// if we're at the about page, load the About template
 Router.route('/about', {
   action: function() {
     this.render('About');
   }
 });
 
-
+// subscribe to the Profiles database, then find the data
+// corresponding to the person logged in
+// render the found data and the EditProfiles template onto 
+// the page
 Router.route('/editProfile/:_id',{
   waitOn: function(){
     return Meteor.subscribe('Profile', this.params._id);
@@ -57,6 +67,9 @@ Router.route('/editProfile/:_id',{
   }
 });
 
+// if we're at the profile page, subscribe to the Profiles database
+// then collect the profile information for the user from the database
+// render the info and the Profiles template onto the page
 Router.route('/profile/:_id', {
   waitOn: function(){
     console.log(this.params._id);
@@ -71,6 +84,9 @@ Router.route('/profile/:_id', {
   }
 });
 
+// if we're at the login page and the user has logged in, route the page over to 
+// either the admin page or the editProfile page of the user depending on who's 
+// logged in. Otherwise, continue to render the login template
 Router.route('/login',{
   waitOn: function(){
     if(Meteor.userId()){
@@ -88,6 +104,7 @@ Router.route('/login',{
   }
 });
 
+// if we're at the logout page/url, go to the login page
 Router.route('/logout',{
   waitOn: function(){
     Meteor.logout(function(){Router.go('/login');});
@@ -95,18 +112,21 @@ Router.route('/logout',{
   }
 })
 
+// if we're at the reset password page, render the resetPassword template
 Router.route('/resetPassword',{
   action: function(){
     this.render('resetPassword');
   }
 })
 
+// if we're at the resetSent page, render the resetSent template
 Router.route('/resetSent',{
   action: function(){
     this.render('resetSent');
   }
 })
 
+// if we're at the setPassword page, render the setPassword template
 Router.route('/setPassword',{
   data: function(){
     return {token: this.params.query.token};
