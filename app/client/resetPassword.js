@@ -1,4 +1,5 @@
 Template.resetPassword.events({
+    // routing function upon form submission
     'submit form': function(event){
         event.preventDefault();
         console.log(event);
