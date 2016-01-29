@@ -252,18 +252,6 @@ h3 {
 	font-size: 16pt;
 }
 
-#who-not-wrapper {
-	width: 100%;
-	background-color: #D00F4A;
-	color: #FFFFFF;
-	font-size: 12pt;
-}
-
-#who-not-wrapper p {
-	margin-left: 15px;
-	margin-right: 15px;
-}
-
 /*****************************************
   All Profiles Page
 *****************************************/
@@ -874,6 +862,9 @@ h3 {
 	font-weight: normal;
 }
 
+/*********************************************************
+* Continuation of general profile page / edit profile
+*********************************************************/
 .panel {
 	background-color: #D00F4A;
 	color: #FFFFFF;
@@ -947,6 +938,9 @@ h3 {
 	text-align: center;
 }
 
+/***************************************************
+* Login Page
+***************************************************/
 .wrapper {
 	margin-top: 80px;
 	margin-bottom: 80px;
