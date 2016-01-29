@@ -719,30 +719,29 @@ h3 {
 	background-color: #FFFFFF;
 	margin-top: 10px;
 	margin-bottom: 5px;
-	width: 50%;
-	margin-left: 25%;
-	margin-right: 25%;
+	width: 76%;
+	margin-left: 12%;
+	margin-right: 12%;
 	overflow: auto;
 }
 
 #background-info {
 	font-family: 'Tahoma';
-	font-size: 14pt;
+	font-size: 18pt;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 500;
 	text-align: left;
 	color: #333333;
 	padding: 1px 1px 4px 4px;
-	width: 500px;
 	margin-top: 0px;
 }
 
 #our-mission {
 	color: #D8507A;
 	font-family: 'Josefin Sans';
-	font-size: 16pt;
-	text-align: left;
+	font-size: 24pt;
+	text-align: center;
 	margin-left: 4px;
 }
 

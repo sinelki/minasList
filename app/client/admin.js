@@ -2,10 +2,8 @@ if (Meteor.isClient) {
     Template.adminOfProfiles.events({
     'submit form': function(event){
       event.preventDefault();
-      var nameVar = event.target.name.value;
       var emailVar = event.target.username.value;
-      var passwordVar = event.target.password.value;
-      Meteor.call("addUser",{user: nameVar, email: emailVar, password: passwordVar});
+      Meteor.call("addUser",{email: emailVar});
      },
     'click .candidate': function(){
         var candidateId = this._id;
@@ -33,7 +31,10 @@ if (Meteor.isClient) {
 
     Template.adminOfProfiles.helpers({
 	users: function(){
+	console.log(Meteor.userId);
 	  var user = Meteor.users.find();
+	  console.log(user);
+	  
 	  return user;
 	},
 	'selectedClass': function(){

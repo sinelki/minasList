@@ -6,7 +6,7 @@ Meteor.methods({
     Profiles.remove({owner: Meteor.userId});
   },
   updateProfile: function (profile) {
-    if (! Meteor.userId() || (Meteor.userId()!==profile.owner)) {
+    if (!Meteor.userId()) {
       throw new Meteor.Error('not-authorized');
     }
   console.log('hello');

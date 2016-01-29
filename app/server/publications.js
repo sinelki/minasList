@@ -66,9 +66,11 @@ Meteor.publish('Profile', function(id){
 })
 
 Meteor.publish("allUsers", function () {
-  if (!Meteor.userId() || Meteor.user().username!=='admin') {
+console.log(Meteor.users.findOne({_id:this.userId}));
+  if (Meteor.users.findOne({_id:this.userId}).username!=='admin') {
     throw new Meteor.Error('not-authorized');
   }
+
   return Meteor.users.find();
 });
 
