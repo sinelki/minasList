@@ -1,12 +1,12 @@
 Profiles = new Mongo.Collection('Profiles');
-
+// get user ID from email
 var userId=Meteor.users.findOne({"emails.address": 'user@gmail.com'});
 
 //console.log(Meteor.users.find({}));
 
 console.log(userId);
 
-
+// create a new user if the email isn't already in the database
 if( userId === undefined){
   Accounts.createUser({
     email: 'user@gmail.com',
@@ -33,6 +33,7 @@ var userId=Meteor.users.findOne({"emails.address": 'user@gmail.com'})._id;
 
 console.log
 
+// set up schema of information pieces that go into a single profile for Profiles database
 Profiles.schema = new SimpleSchema({
   name: {type: String},
   date: {type: Date},
@@ -46,6 +47,7 @@ Profiles.schema = new SimpleSchema({
 
 Profiles.attachSchema(Profiles.schema);
 
+// set up exmaple profile
 var profile = Profiles.findOne({name: 'Shinkai Karokhail'});
 
 if(!profile){
