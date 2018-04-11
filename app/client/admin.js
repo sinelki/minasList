@@ -1,17 +1,18 @@
 if (Meteor.isClient) {
     Template.adminOfProfiles.events({
+    /* add the user account upon form submission */
     'submit form': function(event){
       event.preventDefault();
-      var nameVar = event.target.name.value;
       var emailVar = event.target.username.value;
-      var passwordVar = event.target.password.value;
-      Meteor.call("addUser",{user: nameVar, email: emailVar, password: passwordVar});
+      Meteor.call("addUser",{email: emailVar});
      },
+     /* update the selected candidate when that candidate is clicked on */
     'click .candidate': function(){
         var candidateId = this._id;
         Session.set('selectedCandidate', candidateId);
 	console.log(candidateId);
     },
+    /* Remove the selected candidate from the database */
     'click .remove': function (event) {
       var selectedCandidate = Session.get('selectedCandidate');
 	console.log(selectedCandidate);
@@ -25,17 +26,22 @@ if (Meteor.isClient) {
     } else {
       console.log("Number of users removed: " + result);
      }
-      //Accounts.update();
+
     })
    }
   });
 
 
     Template.adminOfProfiles.helpers({
+    	/* Return all users/candidates */
 	users: function(){
+	console.log(Meteor.userId);
 	  var user = Meteor.users.find();
+	  console.log(user);
+	  
 	  return user;
 	},
+	/* Make sure that the current selected candidate is the candidate clicked on */
 	'selectedClass': function(){
     	  var candidateId = this._id;
           var selectedCandidate = Session.get('selectedCandidate');
@@ -44,9 +50,5 @@ if (Meteor.isClient) {
           }
 	}
   });
-
-    //Template.adminOfProfiles.events ="click .data-cell": (e) ->Session.set("selectedCandidate", @_id)
-
-    //Template.adminOfProfiles.selected = ->if Session.equals("selectedCandidate", @_id) then "selected" else ""
 
 }

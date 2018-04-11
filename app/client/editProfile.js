@@ -1,4 +1,5 @@
 if (Meteor.isClient) {
+    //Upon submitting form, the candidates profile is updated with information they provide
     Template.editInfoForm.events({
     'submit form': function(event){
       event.preventDefault();
@@ -14,12 +15,6 @@ if (Meteor.isClient) {
       var positionVar = event.target.position.value;
       var platformVar = event.target.platform.value;
       var buttonIDVar = event.target.buttonID.value;
-      /*Profiles.insert({
-          city: cityVar,
-	  country: countryVar,
-	  description: positionVar,
-	  platform: platformVar
-      });*/
 	console.log(dateVar);
 	console.log({name: nameVar, date: dateVar, country: countryVar, city: cityVar, description: positionVar, posts: [], owner: ownerVar});
 	Meteor.call("updateProfile",{name: nameVar, date: dateVar, country: countryVar, city: cityVar, description: positionVar, posts: [], owner: ownerVar, buttonID: buttonIDVar});
@@ -28,7 +23,8 @@ if (Meteor.isClient) {
 	
   });
 
-  Template.addPicForm.events({
+  //Skeleton code - Not tested or properly implemented
+  Template.addPicForm.events({ 
   'submit form': function(e, template) {
     e.preventDefault();
     var file = template.find('input type=["file"]').files[0];
